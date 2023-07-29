@@ -1,0 +1,78 @@
+/* css 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OhouseSans", sans-serif;
+  word-break: break-all;
+  letter-spacing: -0.4px;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+  background: transparent;
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/fonts/AppleSDGothicNeoR.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./assets/fonts/AppleSDGothicNeoM.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./assets/fonts/AppleSDGothicNeoB.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./assets/fonts/AppleSDGothicNeoEB.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./assets/fonts/AppleSDGothicNeoH.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "OhouseSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/fonts/OhouseSans400.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "OhouseSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./assets/fonts/OhouseSans500.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "OhouseSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./assets/fonts/OhouseSans700.ttf") format("opentype");
+}
