@@ -7,11 +7,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const [loginInputs, setLoginInputs] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
-  const { email, password } = loginInputs;
+  const { username, password } = loginInputs;
 
   const onChange = (event) => {
     const { value, name } = event.target;
@@ -27,14 +27,14 @@ const LoginPage = () => {
       const res = await postLoginApi(body);
       if (res.status === 200) {
         console.log("로그인성공", res);
-        localStorage.setItem(
-          "logInUser",
-          JSON.stringify({
-            nickname: res.data.data.nickname,
-            userImage: res.data.data.userImage,
-            introduce: res.data.data.introduce,
-          })
-        );
+        // localStorage.setItem(
+        //   "logInUser",
+        //   JSON.stringify({
+        //     username: res.data.data.nickname,
+        //     userImage: res.data.data.userImage,
+        //     introduce: res.data.data.introduce,
+        //   })
+        // );
         navigate("/");
       }
     } catch (error) {
@@ -55,7 +55,14 @@ const LoginPage = () => {
               }}
             />
           </LogoContainer>
-          <EmailInput placeholder="이메일" type="text" name="email" value={email} onChange={onChange} required />
+          <EmailInput
+            placeholder="아이디"
+            type="text"
+            name="username"
+            value={username}
+            onChange={onChange}
+            required
+          />
           <PwInput
             placeholder="비밀번호"
             type="password"

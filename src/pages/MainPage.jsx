@@ -1,15 +1,16 @@
 import { styled } from "styled-components";
 import Card from "../component/common/Card";
 import { useQuery } from "react-query";
-import { getPostsApi } from "../api/posts";
+import { getProductsApi } from "../api/posts";
 
 const MainPage = () => {
-  const { isLoading, error, data } = useQuery("mainPageData", getPostsApi);
+  const { isLoading, error, data } = useQuery("mainPageData", getProductsApi);
   if (isLoading) return "Loading...";
   return (
     <MainPageContainer>
       <CardContainer>
         {data.data.data.map((item) => {
+          console.log(data.data.data);
           return <Card item={item} key={item.postId} />;
         })}
       </CardContainer>

@@ -1,8 +1,8 @@
 import instance from ".";
 
-// 게시글 전체조회
-export const getPostsApi = async () => {
-  const res = await instance.get("/api/posts");
+// 상품 전체조회
+export const getProductsApi = async () => {
+  const res = await instance.get("/products/main");
   return res;
 };
 
@@ -25,8 +25,8 @@ export const postPostsApi = async (body) => {
 };
 
 // 게시글 상세조회
-export const getDetailPostApi = async (postId) => {
-  const res = await instance.get(`/api/posts/${postId}`);
+export const getDetailProductApi = async (productId) => {
+  const res = await instance.get(`/products/${productId}`);
   return res;
 };
 
@@ -56,12 +56,16 @@ export const postCommentsApi = async (postId, body) => {
 
 // 댓글 삭제
 export const deleteCommentsApi = async (postId, commentId) => {
-  const res = await instance.delete(`/api/posts/${postId}/comments/${commentId}`);
+  const res = await instance.delete(
+    `/api/posts/${postId}/comments/${commentId}`
+  );
   return res;
 };
 
 // 댓글 좋아요
 export const likeCommentApi = async (postId, commentId) => {
-  const res = await instance.post(`/api/posts/${postId}/comments/${commentId}/like`);
+  const res = await instance.post(
+    `/api/posts/${postId}/comments/${commentId}/like`
+  );
   return res;
 };

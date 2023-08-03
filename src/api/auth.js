@@ -20,17 +20,17 @@ export const postNicknameDuplicate = async (body) => {
 
 // 로그인
 export const postLoginApi = async (body) => {
-  const res = await instance.post("/api/auth/login", body);
+  const res = await instance.post("/members/login", body);
   return res;
 };
 
 //회원정보 업데이트
-export const putUserUpdate = async(body) => {
+export const putUserUpdate = async (body) => {
   const formData = new FormData();
-  if(body.image===null){
+  if (body.image === null) {
     formData.append("introduce", body.introduce);
     formData.append("nickname", body.nickname);
-  } else{
+  } else {
     formData.append("introduce", body.introduce);
     formData.append("nickname", body.nickname);
     formData.append("image", body.image);
@@ -42,4 +42,4 @@ export const putUserUpdate = async(body) => {
     },
   });
   return res;
-}
+};

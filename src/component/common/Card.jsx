@@ -9,20 +9,24 @@ const Card = ({ item }) => {
     <div>
       <CardContainer
         onClick={() => {
-          navigate(`/detail/${item.postId}`);
+          navigate(`/detail/${item.id}`);
         }}
       >
-        <ImageContainer image={item.postImage} />
-        <ContentContainer>{item.content} </ContentContainer>
+        <ImageContainer image={item.imageUrl} />
+        <ContentContainer>{item.price} </ContentContainer>
       </CardContainer>
       <UserContainer>
-        <UserImage src={item.profileImage === "default" ? userDefault : item.profileImage} />
+        <UserImage
+          src={
+            item.profileImage === "default" ? userDefault : item.profileImage
+          }
+        />
         <UserName
           onClick={() => {
-            navigate(`/userinfo/${item.nickname}`);
+            navigate(`/userinfo/${item.name}`);
           }}
         >
-          {item.nickname}
+          {item.productState}
         </UserName>
       </UserContainer>
     </div>

@@ -7,13 +7,13 @@ const instance = axios.create({
 // 인터셉터 리스폰스 토큰 담기
 instance.interceptors.response.use(
   (response) => {
-    if (response.headers.accesstoken) {
-      localStorage.setItem("accessToken", response.headers.accesstoken);
+    if (response.headers.authorization) {
+      localStorage.setItem("authorization", response.headers.authorization);
     }
 
-    if (response.headers.authorization) {
-      localStorage.setItem("refreshToken", response.headers.authorization);
-    }
+    // if (response.headers.authorization) {
+    //   localStorage.setItem("refreshToken", response.headers.authorization);
+    // }
 
     return response;
   },
@@ -48,14 +48,14 @@ instance.interceptors.response.use(
 instance.interceptors.request.use(
   (config) => {
     const accessToken = localStorage.getItem("accessToken");
-    const refreshToken = localStorage.getItem("refreshToken");
+    // const refreshToken = localStorage.getItem("refreshToken");
 
     if (accessToken) {
-      config.headers["accesstoken"] = accessToken;
+      config.headers["Authorization"] = accessToken;
     }
-    if (refreshToken) {
-      config.headers["authorization"] = refreshToken;
-    }
+    // if (refreshToken) {
+    //   config.headers["authorization"] = refreshToken;
+    // }
 
     return config;
   },
