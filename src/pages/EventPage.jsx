@@ -2,17 +2,18 @@ import React from "react";
 import { styled } from "styled-components";
 import Card from "../component/common/Card";
 import { useQuery } from "react-query";
-import { getDailyLifePostsApi } from "../api/posts";
+import { getEventApi } from "../api/posts";
 
-const DailyLifePage = () => {
-  const { isLoading, error, data } = useQuery("mainPageData", getDailyLifePostsApi);
+const EventPage = () => {
+  const { isLoading, error, data } = useQuery("mainPageData", getEventApi);
   if (isLoading) return "Loading...";
   return (
     <MainPageContainer>
       <CardContainer>
-        {data.data.data.map((item) => {
-          return <Card item={item} key={item.postId} />;
-        })}
+        {data &&
+          data.map((item) => {
+            return <Card item={item} key={item.postId} />;
+          })}
       </CardContainer>
     </MainPageContainer>
   );
@@ -40,4 +41,4 @@ const CardContainer = styled.div`
   }
 `;
 
-export default DailyLifePage;
+export default EventPage;

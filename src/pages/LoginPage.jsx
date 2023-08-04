@@ -23,18 +23,17 @@ const LoginPage = () => {
 
   const handleSubmit = async (body) => {
     try {
-      console.log(body);
       const res = await postLoginApi(body);
       if (res.status === 200) {
         console.log("로그인성공", res);
-        // localStorage.setItem(
-        //   "logInUser",
-        //   JSON.stringify({
-        //     username: res.data.data.nickname,
-        //     userImage: res.data.data.userImage,
-        //     introduce: res.data.data.introduce,
-        //   })
-        // );
+        localStorage.setItem(
+          "logInUser",
+          JSON.stringify({
+            username: body.username,
+            // userImage: res.data.data.userImage,
+            // introduce: res.data.data.introduce,
+          })
+        );
         navigate("/");
       }
     } catch (error) {

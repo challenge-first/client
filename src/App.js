@@ -11,7 +11,7 @@ import Layout2 from "./component/common/Layout2";
 import MyEditPage from "./pages/MyEditPage";
 import { QueryClient, QueryClientProvider } from "react-query";
 import LaptopPage from "./pages/LaptopPage";
-import DailyLifePage from "./pages/DailyLifePage";
+import EventPage from "./pages/EventPage";
 import ComputerPartPage from "./pages/ComputerPartPage";
 import AuctionPage from "./pages/AuctionPage";
 
@@ -29,7 +29,7 @@ function App() {
             <Route path="/laptop" element={<LaptopPage />} />
             <Route path="/computer-part" element={<ComputerPartPage />} />
             <Route path="/auction" element={<AuctionPage />} />
-            <Route path="/event" element={<DailyLifePage />} />
+            <Route path="/event" element={<EventPage />} />
             <Route path="/detail/:id" element={<Detail />} />
           </Route>
           <Route element={<Layout2 />}>

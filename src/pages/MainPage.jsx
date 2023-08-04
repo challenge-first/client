@@ -9,10 +9,10 @@ const MainPage = () => {
   return (
     <MainPageContainer>
       <CardContainer>
-        {data.data.data.map((item) => {
-          console.log(data.data.data);
-          return <Card item={item} key={item.postId} />;
-        })}
+        {data &&
+          data.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
       </CardContainer>
     </MainPageContainer>
   );

@@ -21,7 +21,10 @@ const Header = () => {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (userImageRef.current && !userImageRef.current.contains(event.target)) {
+      if (
+        userImageRef.current &&
+        !userImageRef.current.contains(event.target)
+      ) {
         setIsModalOpen(false);
       }
     };
@@ -62,11 +65,18 @@ const Header = () => {
             </>
           ) : (
             <UserImageWrapper onClick={toggleModal} ref={userImageRef}>
-              <UserImage src={logInuser.userImage === "default" ? userDefaultImage : logInuser.userImage} />
+              {/* <UserImage src={logInuser.userImage === "default" ? userDefaultImage : logInuser.userImage} /> */}
+              {logInuser.username}
               {isModalOpen && (
                 <Modal>
                   <ModalContent>
-                    <ModalItem onClick={() => navigate(`/userinfo/${logInuser.nickname}`)}>마이페이지</ModalItem>
+                    <ModalItem
+                      onClick={() =>
+                        navigate(`/userinfo/${logInuser.nickname}`)
+                      }
+                    >
+                      마이페이지
+                    </ModalItem>
                     <ModalItem onClick={handleLogout}>로그아웃</ModalItem>
                   </ModalContent>
                 </Modal>

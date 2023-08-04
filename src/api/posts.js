@@ -3,13 +3,7 @@ import instance from ".";
 // 상품 전체조회
 export const getProductsApi = async () => {
   const res = await instance.get("/products/main");
-  return res;
-};
-
-// 집사진 게시글 조회
-export const getDailyLifePostsApi = async () => {
-  const res = await instance.get("/api/posts?category=dailylife");
-  return res;
+  return res.data.data;
 };
 
 // 메인, 서브카테고리 조회
@@ -32,15 +26,9 @@ export const getAuctionInfoApi = async () => {
 };
 
 // 이벤트 조회
-export const getEvent = async () => {
+export const getEventApi = async () => {
   const res = await instance.get(`/events`);
   console.log(res);
-  return res;
-};
-
-// 취미일상 게시글 조회
-export const getHousePostsApi = async () => {
-  const res = await instance.get("/api/posts?category=house");
   return res;
 };
 

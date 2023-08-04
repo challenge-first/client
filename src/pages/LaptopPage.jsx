@@ -16,9 +16,10 @@ const LaptopPage = () => {
   return (
     <MainPageContainer>
       <CardContainer>
-        {data?.map((item) => {
-          return <Card item={item} key={item.id} />;
-        })}
+        {data &&
+          data.map((item) => {
+            return <Card item={item} key={item.id} />;
+          })}
       </CardContainer>
     </MainPageContainer>
   );
