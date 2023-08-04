@@ -1,19 +1,31 @@
-import React from "react";
+import { useEffect } from "react";
 import { styled } from "styled-components";
 import Card from "../component/common/Card";
 import { useQuery } from "react-query";
 import { getEventApi } from "../api/posts";
+import { useNavigate } from "react-router-dom";
 
 const EventPage = () => {
-  const { isLoading, error, data } = useQuery("mainPageData", getEventApi);
+  const { isLoading, error, data } = useQuery("eventPageData", getEventApi);
+  const navigate = useNavigate();
+  const logInUser = localStorage?.getItem("logInUser");
+
+  useEffect(() => {
+    if (logInUser === null) {
+      alert("로그인이 필요한 서비스 입니다.");
+      navigate("/login");
+    }
+  }, [data]);
+
   if (isLoading) return "Loading...";
   return (
     <MainPageContainer>
       <CardContainer>
-        {data &&
+        {data.name}
+        {/* {data &&
           data.map((item) => {
             return <Card item={item} key={item.postId} />;
-          })}
+          })} */}
       </CardContainer>
     </MainPageContainer>
   );

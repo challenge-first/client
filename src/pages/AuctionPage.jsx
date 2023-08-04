@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import Card from "../component/common/Card";
 import { useQuery } from "react-query";
 import { getAuctionInfoApi } from "../api/posts";
+import { useNavigate } from "react-router-dom";
 
 const AuctionPage = () => {
-  const { isLoading, error, data } = useQuery("mainPageData", () =>
-    getAuctionInfoApi()
+  const navigate = useNavigate();
+  const { isLoading, error, data } = useQuery(
+    "auctionPageData",
+    getAuctionInfoApi
   );
-  if (isLoading) return "Loading...";
+
+  const logInUser = localStorage.getItem("logInUser");
+  useEffect(() => {
+    if (logInUser === null) {
+      alert("로그인이 필요한 서비스 입니다.");
+      navigate("/login");
+    }
+  }, [data]);
+
+  if (isLoading) {
+    return "Loading...";
+  }
+
   return (
     <MainPageContainer>
-      {data.name}
-      {/* <CardContainer>
-        {data?.map((item) => {
-          return <Card item={item} key={item.postId} />;
-        })}
-      </CardContainer> */}
+      <CardContainer>
+        {data.name}
+        {/* {data?.map((item) => {
+         return <Card item={item} key={item.postId} />;
+         })} */}
+      </CardContainer>
     </MainPageContainer>
   );
 };

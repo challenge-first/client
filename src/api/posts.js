@@ -21,15 +21,13 @@ export const getSubCategoryProductApi = async ({
 // 경매 조회
 export const getAuctionInfoApi = async () => {
   const res = await instance.get(`/auctions`);
-  console.log(res);
-  return res;
+  return res.data.data;
 };
 
 // 이벤트 조회
 export const getEventApi = async () => {
   const res = await instance.get(`/events`);
-  console.log(res);
-  return res;
+  return res.data.data;
 };
 
 // 게시글 작성
