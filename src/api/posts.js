@@ -12,6 +12,32 @@ export const getDailyLifePostsApi = async () => {
   return res;
 };
 
+// 메인, 서브카테고리 조회
+export const getSubCategoryProductApi = async ({
+  mainCategory,
+  subCategory,
+}) => {
+  const res = await instance.get(
+    `/products/main/maincategory/${mainCategory}/subcategory/${subCategory}`
+  );
+
+  return res.data.data;
+};
+
+// 경매 조회
+export const getAuctionInfoApi = async () => {
+  const res = await instance.get(`/auctions`);
+  console.log(res);
+  return res;
+};
+
+// 이벤트 조회
+export const getEvent = async () => {
+  const res = await instance.get(`/events`);
+  console.log(res);
+  return res;
+};
+
 // 취미일상 게시글 조회
 export const getHousePostsApi = async () => {
   const res = await instance.get("/api/posts?category=house");

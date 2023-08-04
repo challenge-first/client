@@ -2,16 +2,22 @@ import React from "react";
 import { styled } from "styled-components";
 import Card from "../component/common/Card";
 import { useQuery } from "react-query";
-import { getHousePostsApi } from "../api/posts";
+import { getSubCategoryProductApi } from "../api/posts";
 
-const HousePage = () => {
-  const { isLoading, error, data } = useQuery("mainPageData", getHousePostsApi);
+const LaptopPage = () => {
+  const category = {
+    mainCategory: "LAPTOP",
+    subCategory: "APPLE",
+  };
+  const { isLoading, error, data } = useQuery("laptopCategoryPageData", () =>
+    getSubCategoryProductApi(category)
+  );
   if (isLoading) return "Loading...";
   return (
     <MainPageContainer>
       <CardContainer>
-        {data.data.data.map((item) => {
-          return <Card item={item} key={item.postId} />;
+        {data?.map((item) => {
+          return <Card item={item} key={item.id} />;
         })}
       </CardContainer>
     </MainPageContainer>
@@ -41,4 +47,4 @@ const CardContainer = styled.div`
   }
 `;
 
-export default HousePage;
+export default LaptopPage;
