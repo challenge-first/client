@@ -1,0 +1,52 @@
+.category-filter-content {
+    margin-bottom: 4em;
+    padding: 2em;
+    border: 1px solid gray;
+}
+
+.category-filter-content form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-filter-content label {
+    cursor: pointer;
+    display: inline-block;
+    width: 5em;
+    white-space: nowrap;
+}
+
+.category-filter-content label input {
+    cursor: pointer;
+}
+
+.category-filter-laptop {
+    margin-bottom: 0.5em;
+}
+
+.category-filter-title {
+    padding: 2em 0 1em 1em;
+    margin-bottom: 3em;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-bottom: 3px solid #000;
+}
+
+.main-category-title {
+    display: inline-block;
+    width: 6em;
+    font-weight: bold;
+}
+
+.category-search-btn {
+    cursor: pointer;
+    width: 6em;
+    height: 2.7em;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    outline: none;
+    background-color: #39b9f8;
+    border-radius: 5px;
+}

@@ -1,0 +1,61 @@
+.header-section {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.header-left-side {
+    display: flex;
+    padding-top: 0.5em;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    width: 12.5em;
+    background: url(/images/logo.jpg) no-repeat center center;
+    background-size: contain;
+    height: 4.5em;
+}
+
+.header-center-side {
+    display: flex;
+    align-items: center;
+}
+
+.header-searchbar {
+    width: 28vw;
+    height: 3em;
+    padding: 0 2em;
+    border-radius: 1.5em;
+    border: 0;
+    outline: none;
+    background-color: #555;
+    color: #eee;
+}
+
+::placeholder {
+    color: #eee;
+}
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.header-point {
+    font-weight: 900;
+}
+
+.login-point-btn {
+    border-radius: 0.3em;
+    padding: 0.5em;
+    background-color: #39b9f8;
+    color: #fff;
+}

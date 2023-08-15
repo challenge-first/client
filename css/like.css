@@ -1,0 +1,21 @@
+.like-area {
+    position: fixed;
+    top: 28em;
+    left: calc(50% + 640px);
+    transform: translate(-100%, 0);
+}
+
+.like-btn {
+    border: 2px solid #ddd;
+    background-color: #fff;
+    padding: 1.1em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #eee
+}
+
+.like-btn i {
+    font-size: 2em;
+    color: #39b9f8;
+    transform: translate(0.5px, 1px);
+    font-weight: bold;
+}

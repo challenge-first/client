@@ -1,0 +1,48 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin: 3em 0;
+}
+
+.product-title-area {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-img-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 40%;
+}
+
+.product-info-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+}
+
+.transaction-btn-area {
+    border-radius: 0.3em;
+    background-color: #39b9f8;
+    width: 6em;
+    height: 2.5em;
+}
+
+.transaction-btn-area a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.15em;
+    width: 100%;
+    height: 100%;
+}

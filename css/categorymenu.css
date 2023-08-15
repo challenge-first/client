@@ -1,0 +1,12 @@
+.category-menubar {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.category-menulist a {
+    color: #39b9f8;
+    font-weight: bold;
+    font-size: 1.15em;
+}

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/css/visual.css">
     <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>conpeter</title>
+    <link rel="stylesheet" href="/css/search.css">
+    <title>competer</title>
 </head>
 <body>
     <!-- header -->
@@ -55,12 +56,61 @@
         </div>
     </section>
 
+    <!-- category filter -->
+    <section class="category-filter-section">
+        <div class="container">
+            <div class="category-filter-title">
+                <p>상세검색</p>
+            </div>
+            <div class="category-filter-content">
+                <form action="">
+                    <div class="category-filter">
+                        <div class="category-filter-laptop">
+                            <span class="main-category-title">노트북: </span>
+                            <label for="samsung">
+                                <input id="samsung" type="checkbox" name="samsung">
+                                <span>삼성</span>
+                            </label>
+                            <label for="lg">
+                                <input id="lg" type="checkbox" name="lg">
+                                <span>엘지</span>
+                            </label>
+                            <label for="apple">
+                                <input id="apple" type="checkbox" name="apple">
+                                <span>에플</span>
+                            </label>
+                        </div>
+                        <div class="category-filter-computer-parts">
+                            <span class="main-category-title">컴퓨터 부품: </span>
+                            <label for="cpu">
+                                <input id="cpu" type="checkbox" name="cpu">
+                                <span>CPU</span>
+                            </label>
+                            <label for="ram">
+                                <input id="ram" type="checkbox" name="ram">
+                                <span>RAM</span>
+                            </label>
+                            <label for="ssd">
+                                <input id="ssd" type="checkbox" name="ssd">
+                                <span>SSD</span>
+                            </label>
+                            <label for="graphic-card">
+                                <input id="graphic-card" type="checkbox" name="graphic-card">
+                                <span>그래픽 카드</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="category-search">
+                        <button class="category-search-btn" type="submit">검색</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- main products -->
     <section class="products-section">
         <div class="products container">
-            <div class="products-section-title">
-                <p>제품</p>
-            </div>
             <div class="product-item-container">
                 <ul class="product-item-list">
                     <li class="product-item">
@@ -135,5 +185,7 @@
             </div>
         </div>
     </section>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
