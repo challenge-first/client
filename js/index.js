@@ -5,6 +5,7 @@ const ul = document.querySelector(".product-item-list");
 // 메인으로 돌아왔을 때 productId 초기화
 (function () {
     localStorage.removeItem("productId");
+    getTop4Products();
 })();
 
 // api 호출 후, 4개 상품 출력
@@ -55,5 +56,3 @@ const onClickProduct = (id) => {
     localStorage.setItem("productId", id);
     window.location = "/pages/product.html";
 };
-
-getTop4Products();
