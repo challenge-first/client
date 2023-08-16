@@ -59,3 +59,13 @@
     background-color: #39b9f8;
     color: #fff;
 }
+
+.header-point-info {
+    display: flex;
+    gap: 1em;
+}
+
+.charge-point-btn {
+    font-weight: bold;
+    color: #39b9f8;
+}

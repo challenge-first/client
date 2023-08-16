@@ -6,6 +6,7 @@
 }
 
 .like-btn {
+    cursor: pointer;
     border: 2px solid #ddd;
     background-color: #fff;
     padding: 1.1em;

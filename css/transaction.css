@@ -1,0 +1,67 @@
+.transaction-form-setcion {
+    height: 100vh;
+}
+
+.transaction-form-setcion .container {
+    height: 100%;
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    height: 100%;
+    gap: 1em;
+}
+
+.transaction-info-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
+.transaction-info-area > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction-info-area label {
+    width: 30%;
+}
+
+.transaction-info-area input {
+    height: 2.5em;
+    padding: 0.2em 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    width: 70%;
+}
+
+.submit-btn-area {
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    margin-top: 1em;
+    gap: 8em;
+}
+
+.submit-btn-area > input, .submit-btn-area > a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    background-color: #39b9f8;
+    border: 0;
+    border-radius: 4px;
+}
