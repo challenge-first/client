@@ -1,141 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/categorymenu.css">
-    <link rel="stylesheet" href="/css/visual.css">
-    <link rel="stylesheet" href="/css/product.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>conpeter</title>
-</head>
-<body>
-    <!-- header -->
-    <section class="header-section">
-        <header class="header container">
-            <div class="header-left-side">
-                <a href="/index.html" class="logo"></a>
-            </div>
-            <div class="header-center-side">
-                <form action="">
-                    <input class="header-searchbar" type="text" placeholder="검색어를 입력해주세요.">
-                </form>
-            </div>
-            <div class="header-right-side">
-                <div class="header-point-info">
-                    <a class="charge-point-btn" href="/pages/point.html">포인트 충전</a>
-                    <p class="header-point">100000p</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/categorymenu.css" />
+        <link rel="stylesheet" href="/css/visual.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>conpeter</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <section class="header-section">
+            <header class="header container">
+                <div class="header-left-side">
+                    <a href="/index.html" class="logo"></a>
                 </div>
-                <div>
-                    <a href="/pages/login.html" class="login-point-btn">로그인</a>
+                <div class="header-center-side">
+                    <form action="">
+                        <input
+                            class="header-searchbar"
+                            type="text"
+                            placeholder="검색어를 입력해주세요."
+                        />
+                    </form>
                 </div>
-            </div>
-        </header>
-    </section>
+                <div class="header-right-side">
+                    <div class="header-point-info">
+                        <a class="charge-point-btn" href="/pages/point.html"
+                            >포인트 충전</a
+                        >
+                        <p class="header-point">100000p</p>
+                    </div>
+                    <div>
+                        <a href="/pages/login.html" class="login-point-btn"
+                            >로그인</a
+                        >
+                    </div>
+                </div>
+            </header>
+        </section>
 
-    <!-- menubar -->
-    <section class="menubar-section">
-        <div class="container">
+        <!-- menubar -->
+        <section class="menubar-section">
+            <div class="container">
                 <ul class="category-menubar">
-                    <li class="category-menulist"><a href="/pages/search.html">전체</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">노트북</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">컴퓨터 부품</a></li>
-                    <li class="category-menulist"><a href="/pages/auction.html">경매</a></li>
-                    <li class="category-menulist"><a href="/pages/event.html">선착순 이벤트</a></li>
-                </ul>
-        </div>
-    </section>
-
-    <!-- visual -->
-    <section class="visual-section">
-        <div class="visual container">
-            <a href="/pages/event.html"><img src="/images/visual-image.png"></a>
-        </div>
-    </section>
-
-    <!-- main products -->
-    <section class="products-section">
-        <div class="products container">
-            <div class="products-section-title">
-                <p>제품</p>
-            </div>
-            <div class="product-item-container">
-                <ul class="product-item-list">
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">전체</a>
                     </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">노트북</a>
                     </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">컴퓨터 부품</a>
                     </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
+                    <li class="category-menulist">
+                        <a href="/pages/auction.html">경매</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/event.html">선착순 이벤트</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <script src="./js/login.js"></script>
-</body>
+        </section>
+
+        <!-- visual -->
+        <section class="visual-section">
+            <div class="visual container">
+                <a href="/pages/event.html"
+                    ><img src="/images/visual-image.png"
+                /></a>
+            </div>
+        </section>
+
+        <!-- main products -->
+        <section class="products-section">
+            <div class="products container">
+                <div class="products-section-title">
+                    <p>제품</p>
+                </div>
+                <div class="product-item-container">
+                    <ul class="product-item-list"></ul>
+                </div>
+            </div>
+        </section>
+        <script src="./js/index.js"></script>
+    </body>
 </html>
