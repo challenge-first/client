@@ -23,17 +23,15 @@ const pwd = document
   .addEventListener("input", onPasswordInput);
 const button = document.querySelector("#button");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", async () => {
   console.log("dataToSend:", dataToSend);
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dataToSend),
-  })
-    .then((res) => {
-      console.log(res);
+  axios
+    .post(url, dataToSend)
+    .then(async (res) => {
+      const data = await res.data;
+      if (res.headers.authorization) {
+        localStorage.setItem("authorization", res.headers.authorization);
+      }
     })
     .catch((err) => {
       console.log(err);
