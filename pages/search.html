@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -21,7 +22,7 @@
                 <a href="/index.html" class="logo"></a>
             </div>
             <div class="header-center-side">
-                <form action="">
+                <form action="" class="search-form">
                     <input class="header-searchbar" type="text" placeholder="검색어를 입력해주세요.">
                 </form>
             </div>
@@ -68,34 +69,34 @@
                         <div class="category-filter-laptop">
                             <span class="main-category-title">노트북: </span>
                             <label for="samsung">
-                                <input id="samsung" type="checkbox" name="samsung">
+                                <input id="samsung" type="checkbox" name="SAMSUNG">
                                 <span>삼성</span>
                             </label>
                             <label for="lg">
-                                <input id="lg" type="checkbox" name="lg">
+                                <input id="lg" type="checkbox" name="LG">
                                 <span>엘지</span>
                             </label>
                             <label for="apple">
-                                <input id="apple" type="checkbox" name="apple">
+                                <input id="apple" type="checkbox" name="APPLE">
                                 <span>에플</span>
                             </label>
                         </div>
                         <div class="category-filter-computer-parts">
                             <span class="main-category-title">컴퓨터 부품: </span>
                             <label for="cpu">
-                                <input id="cpu" type="checkbox" name="cpu">
+                                <input id="cpu" type="checkbox" name="CPU">
                                 <span>CPU</span>
                             </label>
                             <label for="ram">
-                                <input id="ram" type="checkbox" name="ram">
+                                <input id="ram" type="checkbox" name="RAM">
                                 <span>RAM</span>
                             </label>
                             <label for="ssd">
-                                <input id="ssd" type="checkbox" name="ssd">
+                                <input id="ssd" type="checkbox" name="SSD">
                                 <span>SSD</span>
                             </label>
                             <label for="graphic-card">
-                                <input id="graphic-card" type="checkbox" name="graphic-card">
+                                <input id="graphic-card" type="checkbox" name="GRAPHIC_CARD">
                                 <span>그래픽 카드</span>
                             </label>
                         </div>
@@ -112,80 +113,11 @@
     <section class="products-section">
         <div class="products container">
             <div class="product-item-container">
-                <ul class="product-item-list">
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="product-item">
-                        <a href="/pages/product.html">
-                            <div class="product-img-area">
-                                <img class="product-img" src="/images/product.jpg">
-                            </div>
-                            <div class="product-info-area">
-                                <div class="product-info-left-area">
-                                    <p class="product-title">킹갓제너럭맥북</p>
-                                </div>
-                                <div class="product-info-right-area">
-                                    <!-- 꽉찬 하트는 i 태그 이름을 xi-heart 이걸로 하시면 됩니다. -->
-                                    <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
-                                    <p class="product-price">4,800,000</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <ul class="product-item-list"></ul>
             </div>
         </div>
     </section>
-
     <script src="/js/main.js"></script>
+    <script src="/js/search.js"></script>
 </body>
 </html>
