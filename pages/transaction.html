@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/css/transaction.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>competer</title>
@@ -15,23 +16,24 @@
                 <div class="transaction-info-area">
                     <div>
                         <label for="">현재 포인트</label>
-                        <input type="text" readonly value="10000">
+                        <input id= current_input type="text" readonly value="10000">
                     </div>
                     <div>
                         <label for="">결제 포인트</label>
-                        <input type="number" value="0">
+                        <input id= transaction_input type="number" readonly value="0">
                     </div>
                     <div>
                         <label for="">결제 후 포인트</label>
-                        <input type="text" readonly placeholder="10000">
+                        <input id = balance_input type="text" readonly placeholder="10000">
                     </div>
                 </div>
                 <div class="submit-btn-area">
-                    <input type="submit" value="충전">
+                    <button type="button" id="payment_btn">결제</button>
                     <a href="/pages/product.html">취소</a>
                 </div>
             </form>
         </section>
     </section>
+    <script src="../js/transaciton.js"></script>
 </body>
 </html>
