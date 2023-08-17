@@ -6,7 +6,13 @@
 }
 
 .category-menulist a {
-    color: #39b9f8;
+    color: #35c5f0;
     font-weight: bold;
     font-size: 1.15em;
+    transition: color 0.2s, transform 0.15s;
+}
+
+.category-menulist a:hover {
+    color: #009fce;
+    font-weight: bold;
 }

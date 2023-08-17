@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/categorymenu.css">
-    <link rel="stylesheet" href="/css/visual.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/event.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>competer</title>
-</head>
-<body>
-    <!-- header -->
-    <section class="header-section">
-        <header class="header container">
-            <div class="header-left-side">
-                <a href="/index.html" class="logo"></a>
-            </div>
-            <div class="header-center-side">
-                <form action="">
-                    <input class="header-searchbar" type="text" placeholder="검색어를 입력해주세요.">
-                </form>
-            </div>
-            <div class="header-right-side">
-                <div>
-                    <p class="header-point">100000p</p>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/categorymenu.css" />
+        <link rel="stylesheet" href="/css/visual.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/event.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>competer</title>
+    </head>
+    <body>
+        <!-- header -->
+        <section class="header-section">
+            <header class="header container">
+                <div class="header-left-side">
+                    <a href="/index.html" class="logo"></a>
                 </div>
-                <div>
-                    <a href="/pages/login.html" class="login-point-btn">로그인</a>
+                <div class="header-center-side">
+                    <form action="">
+                        <input
+                            class="header-searchbar"
+                            type="text"
+                            placeholder="검색어를 입력해주세요."
+                        />
+                    </form>
                 </div>
-            </div>
-        </header>
-    </section>
+                <div class="header-right-side">
+                    <div>
+                        <p class="header-point">100000p</p>
+                    </div>
+                    <div>
+                        <a href="/pages/login.html" class="login-point-btn"
+                            >로그인</a
+                        >
+                    </div>
+                </div>
+            </header>
+        </section>
 
-    <!-- menubar -->
-    <section class="menubar-section">
-        <div class="container">
+        <!-- menubar -->
+        <section class="menubar-section">
+            <div class="container">
                 <ul class="category-menubar">
-                    <li class="category-menulist"><a href="/pages/search.html">전체</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">노트북</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">컴퓨터 부품</a></li>
-                    <li class="category-menulist"><a href="/pages/auction.html">경매</a></li>
-                    <li class="category-menulist"><a href="/pages/event.html">선착순 이벤트</a></li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">전체</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">노트북</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">컴퓨터 부품</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/auction.html">경매</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/event.html">선착순 이벤트</a>
+                    </li>
                 </ul>
-        </div>
-    </section>
-
-    <!-- visual -->
-    <section class="visual-section">
-        <div class="visual container">
-            <a href="/pages/event.html"><img src="/images/visual-image.png"></a>
-        </div>
-    </section>
-
-    <!-- main content -->
-    <section class="event-detail-section">
-        <div class="container">
-            <div class="event-detail">
-                <div class="event-title-area">
-                    <p>선착순 쿠폰 이벤트</p>
-                </div>
-                <div class="event-img-area">
-                    <img src="/images/cupon.png">
-                </div>
-                <form class="event-btn-area" action="">
-                    <input type="submit" value="쿠폰 받기">
-                </form>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
+
+        <!-- visual -->
+        <section class="visual-section">
+            <div class="visual container">
+                <a href="/pages/event.html"
+                    ><img src="/images/visual-image.png"
+                /></a>
+            </div>
+        </section>
+
+        <!-- main content -->
+        <section class="event-detail-section">
+            <div class="container">
+                <div class="event-detail">
+                    <div class="event-title-area">
+                        <p>선착순 쿠폰 이벤트</p>
+                    </div>
+                    <div class="event-img-area">
+                        <img src="/images/cupon.png" />
+                    </div>
+                    <form class="event-btn-area" action="">
+                        <button class="event-btn" type="button">
+                            쿠폰 받기
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="../js/event.js"></script>
+    </body>
 </html>

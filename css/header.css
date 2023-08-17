@@ -56,8 +56,14 @@
 .login-point-btn {
     border-radius: 0.3em;
     padding: 0.5em;
-    background-color: #39b9f8;
+    background-color: #35c5f0;
     color: #fff;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.login-point-btn:hover {
+    transform: scale(1.2);
+    background-color: #009fce;
 }
 
 .header-point-info {
