@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/auction.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>competer</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -71,11 +72,12 @@
                     <p class="closing-time">마감 시간: <span class="auction-end-time">17:00</span></p>
                 </div>
                 <form class="auction-btn-area" action="">
-                    <input type="number" placeholder="입찰 금액">
-                    <a href="/pages/transaction.html">입 찰</a>
+                    <input id="point" type="number" placeholder="입찰 금액">
+                    <button id="button" type="button">입 찰</button>
                 </form>
             </div>
         </div>
     </section>
 </body>
+<script src="../js/auction.js"></script>
 </html>
