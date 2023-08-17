@@ -1,123 +1,178 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/categorymenu.css">
-    <link rel="stylesheet" href="/css/visual.css">
-    <link rel="stylesheet" href="/css/product.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/search.css">
-    <title>competer</title>
-</head>
-<body>
-    <!-- header -->
-    <section class="header-section">
-        <header class="header container">
-            <div class="header-left-side">
-                <a href="/index.html" class="logo"></a>
-            </div>
-            <div class="header-center-side">
-                <form action="" class="search-form">
-                    <input class="header-searchbar" type="text" placeholder="검색어를 입력해주세요.">
-                </form>
-            </div>
-            <div class="header-right-side">
-                <div>
-                    <p class="header-point">100000p</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/categorymenu.css" />
+        <link rel="stylesheet" href="/css/visual.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/search.css" />
+        <title>competer</title>
+    </head>
+    <body>
+        <!-- header -->
+        <section class="header-section">
+            <header class="header container">
+                <div class="header-left-side">
+                    <a href="/index.html" class="logo"></a>
                 </div>
-                <div>
-                    <a href="/pages/login.html" class="login-point-btn">로그인</a>
+                <div class="header-center-side">
+                    <form action="" class="search-form">
+                        <input
+                            class="header-searchbar"
+                            type="text"
+                            placeholder="검색어를 입력해주세요."
+                        />
+                    </form>
                 </div>
-            </div>
-        </header>
-    </section>
+                <div class="header-right-side">
+                    <div class="header-point-info">
+                        <a class="charge-point-btn" href="/pages/point.html"
+                            >포인트 충전</a
+                        >
+                        <p class="header-point">100000p</p>
+                    </div>
+                    <div>
+                        <a href="/pages/login.html" class="login-point-btn"
+                            >로그인</a
+                        >
+                    </div>
+                </div>
+            </header>
+        </section>
 
-    <!-- menubar -->
-    <section class="menubar-section">
-        <div class="container">
+        <!-- menubar -->
+        <section class="menubar-section">
+            <div class="container">
                 <ul class="category-menubar">
-                    <li class="category-menulist"><a href="/pages/search.html">전체</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">노트북</a></li>
-                    <li class="category-menulist"><a href="/pages/search.html">컴퓨터 부품</a></li>
-                    <li class="category-menulist"><a href="/pages/auction.html">경매</a></li>
-                    <li class="category-menulist"><a href="/pages/event.html">선착순 이벤트</a></li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">전체</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">노트북</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/search.html">컴퓨터 부품</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/auction.html">경매</a>
+                    </li>
+                    <li class="category-menulist">
+                        <a href="/pages/event.html">선착순 이벤트</a>
+                    </li>
                 </ul>
-        </div>
-    </section>
-
-    <!-- visual -->
-    <section class="visual-section">
-        <div class="visual container">
-            <a href="/pages/event.html"><img src="/images/visual-image.png"></a>
-        </div>
-    </section>
-
-    <!-- category filter -->
-    <section class="category-filter-section">
-        <div class="container">
-            <div class="category-filter-title">
-                <p>상세검색</p>
             </div>
-            <div class="category-filter-content">
-                <form action="">
-                    <div class="category-filter">
-                        <div class="category-filter-laptop">
-                            <span class="main-category-title">노트북: </span>
-                            <label for="samsung">
-                                <input id="samsung" type="checkbox" name="SAMSUNG">
-                                <span>삼성</span>
-                            </label>
-                            <label for="lg">
-                                <input id="lg" type="checkbox" name="LG">
-                                <span>엘지</span>
-                            </label>
-                            <label for="apple">
-                                <input id="apple" type="checkbox" name="APPLE">
-                                <span>에플</span>
-                            </label>
+        </section>
+
+        <!-- visual -->
+        <section class="visual-section">
+            <div class="visual container">
+                <a href="/pages/event.html"
+                    ><img src="/images/visual-image.png"
+                /></a>
+            </div>
+        </section>
+
+        <!-- category filter -->
+        <section class="category-filter-section">
+            <div class="container">
+                <div class="category-filter-title">
+                    <p>상세검색</p>
+                </div>
+                <div class="category-filter-content">
+                    <form action="">
+                        <div class="category-filter">
+                            <div class="category-filter-laptop">
+                                <span class="main-category-title"
+                                    >노트북:
+                                </span>
+                                <label for="samsung">
+                                    <input
+                                        id="samsung"
+                                        type="checkbox"
+                                        name="SAMSUNG"
+                                    />
+                                    <span>삼성</span>
+                                </label>
+                                <label for="lg">
+                                    <input id="lg" type="checkbox" name="LG" />
+                                    <span>엘지</span>
+                                </label>
+                                <label for="apple">
+                                    <input
+                                        id="apple"
+                                        type="checkbox"
+                                        name="APPLE"
+                                    />
+                                    <span>에플</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-computer-parts">
+                                <span class="main-category-title"
+                                    >컴퓨터 부품:
+                                </span>
+                                <label for="cpu">
+                                    <input
+                                        id="cpu"
+                                        type="checkbox"
+                                        name="CPU"
+                                    />
+                                    <span>CPU</span>
+                                </label>
+                                <label for="ram">
+                                    <input
+                                        id="ram"
+                                        type="checkbox"
+                                        name="RAM"
+                                    />
+                                    <span>RAM</span>
+                                </label>
+                                <label for="ssd">
+                                    <input
+                                        id="ssd"
+                                        type="checkbox"
+                                        name="SSD"
+                                    />
+                                    <span>SSD</span>
+                                </label>
+                                <label for="graphic-card">
+                                    <input
+                                        id="graphic-card"
+                                        type="checkbox"
+                                        name="GRAPHIC_CARD"
+                                    />
+                                    <span>그래픽 카드</span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="category-filter-computer-parts">
-                            <span class="main-category-title">컴퓨터 부품: </span>
-                            <label for="cpu">
-                                <input id="cpu" type="checkbox" name="CPU">
-                                <span>CPU</span>
-                            </label>
-                            <label for="ram">
-                                <input id="ram" type="checkbox" name="RAM">
-                                <span>RAM</span>
-                            </label>
-                            <label for="ssd">
-                                <input id="ssd" type="checkbox" name="SSD">
-                                <span>SSD</span>
-                            </label>
-                            <label for="graphic-card">
-                                <input id="graphic-card" type="checkbox" name="GRAPHIC_CARD">
-                                <span>그래픽 카드</span>
-                            </label>
+                        <div class="category-search">
+                            <button class="category-search-btn" type="submit">
+                                검색
+                            </button>
                         </div>
-                    </div>
-                    <div class="category-search">
-                        <button class="category-search-btn" type="submit">검색</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- main products -->
-    <section class="products-section">
-        <div class="products container">
-            <div class="product-item-container">
-                <ul class="product-item-list"></ul>
+        <!-- main products -->
+        <section class="products-section">
+            <div class="products container">
+                <div class="product-item-container">
+                    <ul class="product-item-list"></ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <script src="/js/main.js"></script>
-    <script src="/js/search.js"></script>
-</body>
+        </section>
+        <script src="/js/main.js"></script>
+        <script src="/js/search.js"></script>
+        <script src="../js/loginCheck.js"></script>
+    </body>
 </html>
