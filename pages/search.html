@@ -24,26 +24,13 @@
                 <div class="header-left-side">
                     <a href="/index.html" class="logo"></a>
                 </div>
-                <div class="header-center-side">
-                    <form action="" class="search-form">
-                        <input
-                            class="header-searchbar"
-                            type="text"
-                            placeholder="검색어를 입력해주세요."
-                        />
-                    </form>
-                </div>
                 <div class="header-right-side">
                     <div class="header-point-info">
-                        <a class="charge-point-btn" href="/pages/point.html"
-                            >포인트 충전</a
-                        >
+                        <a class="charge-point-btn" href="/pages/point.html">포인트 충전</a>
                         <p class="header-point">100000p</p>
                     </div>
                     <div>
-                        <a href="/pages/login.html" class="login-point-btn"
-                            >로그인</a
-                        >
+                        <a href="/pages/login.html" class="login-point-btn">로그인</a>
                     </div>
                 </div>
             </header>
@@ -54,13 +41,10 @@
             <div class="container">
                 <ul class="category-menubar">
                     <li class="category-menulist">
-                        <a href="/pages/search.html">전체</a>
+                        <a href="/index.html">메인</a>
                     </li>
                     <li class="category-menulist">
-                        <a href="/pages/search.html">노트북</a>
-                    </li>
-                    <li class="category-menulist">
-                        <a href="/pages/search.html">컴퓨터 부품</a>
+                        <a href="/pages/search.html">검색</a>
                     </li>
                     <li class="category-menulist">
                         <a href="/pages/auction.html">경매</a>
@@ -88,75 +72,588 @@
                     <p>상세검색</p>
                 </div>
                 <div class="category-filter-content">
-                    <form action="">
+                    <form action="" class="search-form">
                         <div class="category-filter">
-                            <div class="category-filter-laptop">
-                                <span class="main-category-title"
-                                    >노트북:
-                                </span>
-                                <label for="samsung">
-                                    <input
-                                        id="samsung"
-                                        type="checkbox"
-                                        name="SAMSUNG"
-                                    />
-                                    <span>삼성</span>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">ACCESSORIES:</span>
+                                <label for="ALL_ACCESSORIES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_ACCESSORIES_CATEGORY" type="checkbox" name="ACCESSORIES"/>
+                                    <span>ALL_ACCESSORIES_CATEGORY</span>
                                 </label>
-                                <label for="lg">
-                                    <input id="lg" type="checkbox" name="LG" />
-                                    <span>엘지</span>
+                                <label for="BAGS_AND_LUGGAGE">
+                                    <input class="sub-category-checkbox" id="BAGS_AND_LUGGAGE" type="checkbox" name="BAGS_AND_LUGGAGE"/>
+                                    <span>BAGS_AND_LUGGAGE</span>
                                 </label>
-                                <label for="apple">
-                                    <input
-                                        id="apple"
-                                        type="checkbox"
-                                        name="APPLE"
-                                    />
-                                    <span>에플</span>
+                                <label for="GOLD_AND_DIAMOND_JEWELLERY">
+                                    <input class="sub-category-checkbox" id="GOLD_AND_DIAMOND_JEWELLERY" type="checkbox" name="GOLD_AND_DIAMOND_JEWELLERY" />
+                                    <span>GOLD_AND_DIAMOND_JEWELLERY</span>
+                                </label>
+                                <label for="HANDBAGS_AND_CLUTCHES">
+                                    <input class="sub-category-checkbox" id="HANDBAGS_AND_CLUTCHES" type="checkbox" name="HANDBAGS_AND_CLUTCHES" />
+                                    <span>HANDBAGS_AND_CLUTCHES</span>
+                                </label>
+                                <label for="JEWELLERY">
+                                    <input class="sub-category-checkbox" id="JEWELLERY" type="checkbox" name="JEWELLERY" />
+                                    <span>JEWELLERY</span>
+                                </label>
+                                <label for="SUNGLASSES">
+                                    <input class="sub-category-checkbox" id="SUNGLASSES" type="checkbox" name="SUNGLASSES" />
+                                    <span>SUNGLASSES</span>
+                                </label>
+                                <label for="WATCHES">
+                                    <input class="sub-category-checkbox" id="WATCHES" type="checkbox" name="WATCHES" />
+                                    <span>WATCHES</span>
+                                </label>
+                                <label for="HANDAGS_AND_CLUTCHES">
+                                    <input class="sub-category-checkbox" id="HANDAGS_AND_CLUTCHES" type="checkbox" name="HANDAGS_AND_CLUTCHES" />
+                                    <span>HANDAGS_AND_CLUTCHES</span>
                                 </label>
                             </div>
-                            <div class="category-filter-computer-parts">
-                                <span class="main-category-title"
-                                    >컴퓨터 부품:
-                                </span>
-                                <label for="cpu">
-                                    <input
-                                        id="cpu"
-                                        type="checkbox"
-                                        name="CPU"
-                                    />
-                                    <span>CPU</span>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">APPLIANCES:</span>
+                                <label for="ALL_APPLIANCES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_APPLIANCES_CATEGORY" type="checkbox" name="APPLIANCES"/>
+                                    <span>ALL_APPLIANCES_CATEGORY</span>
                                 </label>
-                                <label for="ram">
-                                    <input
-                                        id="ram"
-                                        type="checkbox"
-                                        name="RAM"
-                                    />
-                                    <span>RAM</span>
+                                <label for="AIR_CONDITIONERS">
+                                    <input class="sub-category-checkbox" id="AIR_CONDITIONERS" type="checkbox" name="AIR_CONDITIONERS"/>
+                                    <span>AIR_CONDITIONERS</span>
                                 </label>
-                                <label for="ssd">
-                                    <input
-                                        id="ssd"
-                                        type="checkbox"
-                                        name="SSD"
-                                    />
-                                    <span>SSD</span>
+                                <label for="All_APPLIANCES">
+                                    <input class="sub-category-checkbox" id="All_APPLIANCES" type="checkbox" name="All_APPLIANCES"/>
+                                    <span>All_APPLIANCES</span>
                                 </label>
-                                <label for="graphic-card">
-                                    <input
-                                        id="graphic-card"
-                                        type="checkbox"
-                                        name="GRAPHIC_CARD"
-                                    />
-                                    <span>그래픽 카드</span>
+                                <label for="HEATING_AND_COOLING_APPLIANCES">
+                                    <input class="sub-category-checkbox" id="HEATING_AND_COOLING_APPLIANCES" type="checkbox" name="HEATING_AND_COOLING_APPLIANCES"/>
+                                    <span>HEATING_AND_COOLING_APPLIANCES</span>
+                                </label>
+                                <label for="KITCHEN_AND_HOME_APPLIANCES">
+                                    <input class="sub-category-checkbox" id="KITCHEN_AND_HOME_APPLIANCES" type="checkbox" name="KITCHEN_AND_HOME_APPLIANCES"/>
+                                    <span>KITCHEN_AND_HOME_APPLIANCES</span>
+                                </label>
+                                <label for="REFRIGERATORS">
+                                    <input class="sub-category-checkbox" id="REFRIGERATORS" type="checkbox" name="REFRIGERATORS"/>
+                                    <span>REFRIGERATORS</span>
+                                </label>
+                                <label for="WASHING_MACHINES">
+                                    <input class="sub-category-checkbox" id="WASHING_MACHINES" type="checkbox" name="WASHING_MACHINES"/>
+                                    <span>WASHING_MACHINES</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">BAGS_AND_LUGGAGE:</span>
+                                <label for="ALL_BAGS_AND_LUGGAGE_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_BAGS_AND_LUGGAGE_CATEGORY" type="checkbox" name="BAGS_AND_LUGGAGE"/>
+                                    <span>ALL_BAGS_AND_LUGGAGE_CATEGORY</span>
+                                </label>
+                                <label for="BACKPACKS">
+                                    <input class="sub-category-checkbox" id="BACKPACKS" type="checkbox" name="BACKPACKS"/>
+                                    <span>BACKPACKS</span>
+                                </label>
+                                <label for="RUCKSACKS">
+                                    <input class="sub-category-checkbox" id="RUCKSACKS" type="checkbox" name="RUCKSACKS"/>
+                                    <span>RUCKSACKS</span>
+                                </label>
+                                <label for="SUITCASES_AND_TROLLEY_BAGS">
+                                    <input class="sub-category-checkbox" id="SUITCASES_AND_TROLLEY_BAGS" type="checkbox" name="SUITCASES_AND_TROLLEY_BAGS"/>
+                                    <span>SUITCASES_AND_TROLLEY_BAGS</span>
+                                </label>
+                                <label for="TRAVEL_ACCESSORIES">
+                                    <input class="sub-category-checkbox" id="TRAVEL_ACCESSORIES" type="checkbox" name="TRAVEL_ACCESSORIES"/>
+                                    <span>TRAVEL_ACCESSORIES</span>
+                                </label>
+                                <label for="TRAVEL_DUFFLES">
+                                    <input class="sub-category-checkbox" id="TRAVEL_DUFFLES" type="checkbox" name="TRAVEL_DUFFLES"/>
+                                    <span>TRAVEL_DUFFLES</span>
+                                </label>
+                                <label for="WALLETS">
+                                    <input class="sub-category-checkbox" id="WALLETS" type="checkbox" name="WALLETS"/>
+                                    <span>WALLETS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">BEAUTY_AND_HEALTH:</span>
+                                <label for="ALL_BEAUTY_AND_HEALTH_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_BEAUTY_AND_HEALTH_CATEGORY" type="checkbox" name="BEAUTY_AND_HEALTH"/>
+                                    <span>ALL_BEAUTY_AND_HEALTH_CATEGORY</span>
+                                </label>
+                                <label for="BEAUTY_AND_GROOMING">
+                                    <input class="sub-category-checkbox" id="BEAUTY_AND_GROOMING" type="checkbox" name="BEAUTY_AND_GROOMING" />
+                                    <span>BEAUTY_AND_GROOMING</span>
+                                </label>
+                                <label for="HEALTH_AND_PERSONAL_CARE">
+                                    <input class="sub-category-checkbox" id="HEALTH_AND_PERSONAL_CARE" type="checkbox" name="HEALTH_AND_PERSONAL_CARE" />
+                                    <span>HEALTH_AND_PERSONAL_CARE</span>
+                                </label>
+                                <label for="HOUSEHOLD_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="HOUSEHOLD_SUPPLIES" type="checkbox" name="HOUSEHOLD_SUPPLIES" />
+                                    <span>HOUSEHOLD_SUPPLIES</span>
+                                </label>
+                                <label for="LUXURY_BEAUTY">
+                                    <input class="sub-category-checkbox" id="LUXURY_BEAUTY" type="checkbox" name="LUXURY_BEAUTY" />
+                                    <span>LUXURY_BEAUTY</span>
+                                </label>
+                                <label for="MAKEUP">
+                                    <input class="sub-category-checkbox" id="MAKEUP" type="checkbox" name="MAKEUP" />
+                                    <span>MAKEUP</span>
+                                </label>
+                                <label for="PERSONAL_CARE_APPLIANCES">
+                                    <input class="sub-category-checkbox" id="PERSONAL_CARE_APPLIANCES" type="checkbox" name="PERSONAL_CARE_APPLIANCES" />
+                                    <span>PERSONAL_CARE_APPLIANCES</span>
+                                </label>
+                                <label for="VALUE_BAZAAR">
+                                    <input class="sub-category-checkbox" id="VALUE_BAZAAR" type="checkbox" name="VALUE_BAZAAR" />
+                                    <span>VALUE_BAZAAR</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">CAR_AND_MOTORBIKE:</span>
+                                <label for="ALL_CAR_AND_MOTORBIKE_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_CAR_AND_MOTORBIKE_CATEGORY" type="checkbox" name="CAR_AND_MOTORBIKE"/>
+                                    <span>ALL_CAR_AND_MOTORBIKE_CATEGORY</span>
+                                </label>
+                                <label for="ALL_CAR_AND_MOTORBIKE_PRODUCTS">
+                                    <input class="sub-category-checkbox" id="ALL_CAR_AND_MOTORBIKE_PRODUCTS" type="checkbox" name="ALL_CAR_AND_MOTORBIKE_PRODUCTS"/>
+                                    <span>ALL_CAR_AND_MOTORBIKE_PRODUCTS</span>
+                                </label>
+                                <label for="CAR_ACCESSORIES">
+                                    <input class="sub-category-checkbox" id="CAR_ACCESSORIES" type="checkbox" name="CAR_ACCESSORIES"/>
+                                    <span>CAR_ACCESSORIES</span>
+                                </label>
+                                <label for="CAR_AND_BIKE_CARE">
+                                    <input class="sub-category-checkbox" id="CAR_AND_BIKE_CARE" type="checkbox" name="CAR_AND_BIKE_CARE"/>
+                                    <span>CAR_AND_BIKE_CARE</span>
+                                </label>
+                                <label for="CAR_ELECTRONICS">
+                                    <input class="sub-category-checkbox" id="CAR_ELECTRONICS" type="checkbox" name="CAR_ELECTRONICS"/>
+                                    <span>CAR_ELECTRONICS</span>
+                                </label>
+                                <label for="CAR_PARTS">
+                                    <input class="sub-category-checkbox" id="CAR_PARTS" type="checkbox" name="CAR_PARTS"/>
+                                    <span>CAR_PARTS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">GROCERY_AND_GOURMET_FOODS:</span>
+                                <label for="ALL_GROCERY_AND_GOURMET_FOODS_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_GROCERY_AND_GOURMET_FOODS_CATEGORY" type="checkbox" name="GROCERY_AND_GOURMET_FOODS"/>
+                                    <span>ALL_GROCERY_AND_GOURMET_FOODS_CATEGORY</span>
+                                </label>
+                                <label for="ALL_GROCERY_AND_GOURMET_FOODS">
+                                    <input class="sub-category-checkbox" id="ALL_GROCERY_AND_GOURMET_FOODS" type="checkbox" name="ALL_GROCERY_AND_GOURMET_FOODS" />
+                                    <span>ALL_GROCERY_AND_GOURMET_FOODS</span>
+                                </label>
+                                <label for="COFFEE_TEA_AND_BEVERAGES">
+                                    <input class="sub-category-checkbox" id="COFFEE_TEA_AND_BEVERAGES" type="checkbox" name="COFFEE_TEA_AND_BEVERAGES" />
+                                    <span>COFFEE_TEA_AND_BEVERAGES</span>
+                                </label>
+                                <label for="SNACK_FOODS">
+                                    <input class="sub-category-checkbox" id="SNACK_FOODS" type="checkbox" name="SNACK_FOODS" />
+                                    <span>SNACK_FOODS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">HOME_AND_KITCHEN:</span>
+                                <label for="ALL_HOME_AND_KITCHEN_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_HOME_AND_KITCHEN_CATEGORY" type="checkbox" name="HOME_AND_KITCHEN"/>
+                                    <span>ALL_HOME_AND_KITCHEN_CATEGORY</span>
+                                </label>
+                                <label for="ALL_HOME_AND_KITCHEN">
+                                    <input class="sub-category-checkbox" id="ALL_HOME_AND_KITCHEN" type="checkbox" name="ALL_HOME_AND_KITCHEN" />
+                                    <span>ALL_HOME_AND_KITCHEN</span>
+                                </label>
+                                <label for="BEDROOM_LINEN">
+                                    <input class="sub-category-checkbox" id="BEDROOM_LINEN" type="checkbox" name="BEDROOM_LINEN" />
+                                    <span>BEDROOM_LINEN</span>
+                                </label>
+                                <label for="FURNITURE">
+                                    <input class="sub-category-checkbox" id="FURNITURE" type="checkbox" name="FURNITURE" />
+                                    <span>FURNITURE</span>
+                                </label>
+                                <label for="GARDEN_AND_OUTDOORS">
+                                    <input class="sub-category-checkbox" id="GARDEN_AND_OUTDOORS" type="checkbox" name="GARDEN_AND_OUTDOORS" />
+                                    <span>GARDEN_AND_OUTDOORS</span>
+                                </label>
+                                <label for="HOME_DECOR">
+                                    <input class="sub-category-checkbox" id="HOME_DECOR" type="checkbox" name="HOME_DECOR" />
+                                    <span>HOME_DECOR</span>
+                                </label>
+                                <label for="HOME_FURNISHING">
+                                    <input class="sub-category-checkbox" id="HOME_FURNISHING" type="checkbox" name="HOME_FURNISHING" />
+                                    <span>HOME_FURNISHING</span>
+                                </label>
+                                <label for="HOME_IMPROVEMENT">
+                                    <input class="sub-category-checkbox" id="HOME_IMPROVEMENT" type="checkbox" name="HOME_IMPROVEMENT" />
+                                    <span>HOME_IMPROVEMENT</span>
+                                </label>
+                                <label for="HOME_STORAGE">
+                                    <input class="sub-category-checkbox" id="HOME_STORAGE" type="checkbox" name="HOME_STORAGE" />
+                                    <span>HOME_STORAGE</span>
+                                </label>
+                                <label for="INDOOR_LIGHTING">
+                                    <input class="sub-category-checkbox" id="INDOOR_LIGHTING" type="checkbox" name="INDOOR_LIGHTING" />
+                                    <span>INDOOR_LIGHTING</span>
+                                </label>
+                                <label for="KITCHEN_AND_DINING">
+                                    <input class="sub-category-checkbox" id="KITCHEN_AND_DINING" type="checkbox" name="KITCHEN_AND_DINING" />
+                                    <span>KITCHEN_AND_DINING</span>
+                                </label>
+                                <label for="KITCHEN_STORAGE_AND_CONTAINERS">
+                                    <input class="sub-category-checkbox" id="KITCHEN_STORAGE_AND_CONTAINERS" type="checkbox" name="KITCHEN_STORAGE_AND_CONTAINERS" />
+                                    <span>KITCHEN_STORAGE_AND_CONTAINERS</span>
+                                </label>
+                                <label for="SEWING_AND_CRAFT_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="SEWING_AND_CRAFT_SUPPLIES" type="checkbox" name="SEWING_AND_CRAFT_SUPPLIES" />
+                                    <span>SEWING_AND_CRAFT_SUPPLIES</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">HOME_KITCHEN_PETS:</span>
+                                <label for="ALL_HOME_KITCHEN_PETS_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_HOME_KITCHEN_PETS_CATEGORY" type="checkbox" name="HOME_KITCHEN_PETS"/>
+                                    <span>ALL_HOME_KITCHEN_PETS_CATEGORY</span>
+                                </label>
+                                <label for="REFURBISHED_AND_OPEN_BOX">
+                                    <input class="sub-category-checkbox" id="REFURBISHED_AND_OPEN_BOX" type="checkbox" name="REFURBISHED_AND_OPEN_BOX" />
+                                    <span>REFURBISHED_AND_OPEN_BOX</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">INDUSTRIAL_SUPPLIES:</span>
+                                <label for="ALL_INDUSTRIAL_SUPPLIES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_INDUSTRIAL_SUPPLIES_CATEGORY" type="checkbox" name="INDUSTRIAL_SUPPLIES"/>
+                                    <span>ALL_INDUSTRIAL_SUPPLIES_CATEGORY</span>
+                                </label>
+                                <label for="INDUSTRIAL_AND_SCIENTIFIC_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="INDUSTRIAL_AND_SCIENTIFIC_SUPPLIES" type="checkbox" name="INDUSTRIAL_AND_SCIENTIFIC_SUPPLIES" />
+                                    <span>INDUSTRIAL_AND_SCIENTIFIC_SUPPLIES</span>
+                                </label>
+                                <label for="JANITORIAL_AND_SANITATION_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="JANITORIAL_AND_SANITATION_SUPPLIES" type="checkbox" name="JANITORIAL_AND_SANITATION_SUPPLIES" />
+                                    <span>JANITORIAL_AND_SANITATION_SUPPLIES</span>
+                                </label>
+                                <label for="LAB_AND_SCIENTIFIC">
+                                    <input class="sub-category-checkbox" id="LAB_AND_SCIENTIFIC" type="checkbox" name="LAB_AND_SCIENTIFIC" />
+                                    <span>LAB_AND_SCIENTIFIC</span>
+                                </label>
+                                <label for="TEST_MEASURE_AND_INSPECT">
+                                    <input class="sub-category-checkbox" id="TEST_MEASURE_AND_INSPECT" type="checkbox" name="TEST_MEASURE_AND_INSPECT" />
+                                    <span>TEST_MEASURE_AND_INSPECT</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">KIDS_FASHION:</span>
+                                <label for="ALL_KIDS_FASHION_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_KIDS_FASHION_CATEGORY" type="checkbox" name="KIDS_FASHION"/>
+                                    <span>ALL_KIDS_FASHION_CATEGORY</span>
+                                </label>
+                                <label for="BABY_FASHION">
+                                    <input class="sub-category-checkbox" id="BABY_FASHION" type="checkbox" name="BABY_FASHION" />
+                                    <span>BABY_FASHION</span>
+                                </label>
+                                <label for="KIDS_CLOTHING">
+                                    <input class="sub-category-checkbox" id="KIDS_CLOTHING" type="checkbox" name="KIDS_CLOTHING" />
+                                    <span>KIDS_CLOTHING</span>
+                                </label>
+                                <label for="KIDS_FASHION">
+                                    <input class="sub-category-checkbox" id="KIDS_FASHION" type="checkbox" name="KIDS_FASHION" />
+                                    <span>KIDS_FASHION</span>
+                                </label>
+                                <label for="KIDS_SHOES">
+                                    <input class="sub-category-checkbox" id="KIDS_SHOES" type="checkbox" name="KIDS_SHOES" />
+                                    <span>KIDS_SHOES</span>
+                                </label>
+                                <label for="KIDS_WATCHES">
+                                    <input class="sub-category-checkbox" id="KIDS_WATCHES" type="checkbox" name="KIDS_WATCHES" />
+                                    <span>KIDS_WATCHES</span>
+                                </label>
+                                <label for="SCHOOL_BAGS">
+                                    <input class="sub-category-checkbox" id="SCHOOL_BAGS" type="checkbox" name="SCHOOL_BAGS" />
+                                    <span>SCHOOL_BAGS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">MENS_CLOTHING:</span>
+                                <label for="ALL_MENS_CLOTHING_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_MENS_CLOTHING_CATEGORY" type="checkbox" name="MENS_CLOTHING"/>
+                                    <span>ALL_MENS_CLOTHING_CATEGORY</span>
+                                </label>
+                                <label for="INNERWEAR">
+                                    <input class="sub-category-checkbox" id="INNERWEAR" type="checkbox" name="INNERWEAR" />
+                                    <span>INNERWEAR</span>
+                                </label>
+                                <label for="JEANS">
+                                    <input class="sub-category-checkbox" id="JEANS" type="checkbox" name="JEANS" />
+                                    <span>JEANS</span>
+                                </label>
+                                <label for="SHIRTS">
+                                    <input class="sub-category-checkbox" id="SHIRTS" type="checkbox" name="SHIRTS" />
+                                    <span>SHIRTS</span>
+                                </label>
+                                <label for="T_SHIRTS_AND_POLOS">
+                                    <input class="sub-category-checkbox" id="T_SHIRTS_AND_POLOS" type="checkbox" name="T_SHIRTS_AND_POLOS" />
+                                    <span>T_SHIRTS_AND_POLOS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">MENS_SHOES:</span>
+                                <label for="ALL_MENS_SHOES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_MENS_SHOES_CATEGORY" type="checkbox" name="MENS_SHOES"/>
+                                    <span>ALL_MENS_SHOES_CATEGORY</span>
+                                </label>
+                                <label for="CASUAL_SHOES">
+                                    <input class="sub-category-checkbox" id="CASUAL_SHOES" type="checkbox" name="CASUAL_SHOES" />
+                                    <span>CASUAL_SHOES</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">MUSIC:</span>
+                                <label for="ALL_MUSIC_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_MUSIC_CATEGORY" type="checkbox" name="MUSIC"/>
+                                    <span>ALL_MUSIC_CATEGORY</span>
+                                </label>
+                                <label for="MUSICAL_INSTRUMENTS_AND_PROFESSIONAL_AUDIO">
+                                    <input class="sub-category-checkbox" id="MUSICAL_INSTRUMENTS_AND_PROFESSIONAL_AUDIO" type="checkbox" name="MUSICAL_INSTRUMENTS_AND_PROFESSIONAL_AUDIO" />
+                                    <span>MUSICAL_INSTRUMENTS_AND_PROFESSIONAL_AUDIO</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">PET_SUPPLIES:</span>
+                                <label for="ALL_PET_SUPPLIES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_PET_SUPPLIES_CATEGORY" type="checkbox" name="PET_SUPPLIES"/>
+                                    <span>ALL_PET_SUPPLIES_CATEGORY</span>
+                                </label>
+                                <label for="ALL_PET_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="ALL_PET_SUPPLIES" type="checkbox" name="ALL_PET_SUPPLIES" />
+                                    <span>ALL_PET_SUPPLIES</span>
+                                </label>
+                                <label for="DOG_SUPPLIES">
+                                    <input class="sub-category-checkbox" id="DOG_SUPPLIES" type="checkbox" name="DOG_SUPPLIES" />
+                                    <span>DOG_SUPPLIES</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">SPORTS_AND_FITNESS:</span>
+                                <label for="ALL_SPORTS_AND_FITNESS_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_SPORTS_AND_FITNESS_CATEGORY" type="checkbox" name="SPORTS_AND_FITNESS"/>
+                                    <span>ALL_SPORTS_AND_FITNESS_CATEGORY</span>
+                                </label>
+                                <label for="ALL_EXERCISE_AND_FITNESS">
+                                    <input class="sub-category-checkbox" id="ALL_EXERCISE_AND_FITNESS" type="checkbox" name="ALL_EXERCISE_AND_FITNESS" />
+                                    <span>ALL_EXERCISE_AND_FITNESS</span>
+                                </label>
+                                <label for="ALL_SPORTS_FITNESS_AND_OUTDOORS">
+                                    <input class="sub-category-checkbox" id="ALL_SPORTS_FITNESS_AND_OUTDOORS" type="checkbox" name="ALL_SPORTS_FITNESS_AND_OUTDOORS" />
+                                    <span>ALL_SPORTS_FITNESS_AND_OUTDOORS</span>
+                                </label>
+                                <label for="BADMINTON">
+                                    <input class="sub-category-checkbox" id="BADMINTON" type="checkbox" name="BADMINTON" />
+                                    <span>BADMINTON</span>
+                                </label>
+                                <label for="CAMPING_AND_HIKING">
+                                    <input class="sub-category-checkbox" id="CAMPING_AND_HIKING" type="checkbox" name="CAMPING_AND_HIKING" />
+                                    <span>CAMPING_AND_HIKING</span>
+                                </label>
+                                <label for="CARDIO_EQUIPMENT">
+                                    <input class="sub-category-checkbox" id="CARDIO_EQUIPMENT" type="checkbox" name="CARDIO_EQUIPMENT" />
+                                    <span>CARDIO_EQUIPMENT</span>
+                                </label>
+                                <label for="CRICKET">
+                                    <input class="sub-category-checkbox" id="CRICKET" type="checkbox" name="CRICKET" />
+                                    <span>CRICKET</span>
+                                </label>
+                                <label for="CYCLING">
+                                    <input class="sub-category-checkbox" id="CYCLING" type="checkbox" name="CYCLING" />
+                                    <span>CYCLING</span>
+                                </label>
+                                <label for="FITNESS_ACCESSORIES">
+                                    <input class="sub-category-checkbox" id="FITNESS_ACCESSORIES" type="checkbox" name="FITNESS_ACCESSORIES" />
+                                    <span>FITNESS_ACCESSORIES</span>
+                                </label>
+                                <label for="FOOTBALL">
+                                    <input class="sub-category-checkbox" id="FOOTBALL" type="checkbox" name="FOOTBALL" />
+                                    <span>FOOTBALL</span>
+                                </label>
+                                <label for="RUNNING">
+                                    <input class="sub-category-checkbox" id="RUNNING" type="checkbox" name="RUNNING" />
+                                    <span>RUNNING</span>
+                                </label>
+                                <label for="STRENGTH_TRAINING">
+                                    <input class="sub-category-checkbox" id="STRENGTH_TRAINING" type="checkbox" name="STRENGTH_TRAINING" />
+                                    <span>STRENGTH_TRAINING</span>
+                                </label>
+                                <label for="YOGA">
+                                    <input class="sub-category-checkbox" id="YOGA" type="checkbox" name="YOGA" />
+                                    <span>YOGA</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">STORES:</span>
+                                <label for="ALL_STORES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_STORES_CATEGORY" type="checkbox" name="STORES"/>
+                                    <span>ALL_STORES_CATEGORY</span>
+                                </label>
+                                <label for="AMAZON_FASHION">
+                                    <input class="sub-category-checkbox" id="AMAZON_FASHION" type="checkbox" name="AMAZON_FASHION" />
+                                    <span>AMAZON_FASHION</span>
+                                </label>
+                                <label for="FASHION_SALES_AND_DEALS">
+                                    <input class="sub-category-checkbox" id="FASHION_SALES_AND_DEALS" type="checkbox" name="FASHION_SALES_AND_DEALS" />
+                                    <span>FASHION_SALES_AND_DEALS</span>
+                                </label>
+                                <label for="MENS_FASHION">
+                                    <input class="sub-category-checkbox" id="MENS_FASHION" type="checkbox" name="MENS_FASHION" />
+                                    <span>MENS_FASHION</span>
+                                </label>
+                                <label for="SPORTSWEAR">
+                                    <input class="sub-category-checkbox" id="SPORTSWEAR" type="checkbox" name="SPORTSWEAR" />
+                                    <span>SPORTSWEAR</span>
+                                </label>
+                                <label for="THE_DESIGNER_BOUTIQUE">
+                                    <input class="sub-category-checkbox" id="THE_DESIGNER_BOUTIQUE" type="checkbox" name="THE_DESIGNER_BOUTIQUE" />
+                                    <span>THE_DESIGNER_BOUTIQUE</span>
+                                </label>
+                                <label for="WOMENS_FASHION">
+                                    <input class="sub-category-checkbox" id="WOMENS_FASHION" type="checkbox" name="WOMENS_FASHION" />
+                                    <span>WOMENS_FASHION</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">TOYS_AND_BABY_PRODUCTS:</span>
+                                <label for="ALL_TOYS_AND_BABY_PRODUCTS_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_TOYS_AND_BABY_PRODUCTS_CATEGORY" type="checkbox" name="TOYS_AND_BABY_PRODUCTS"/>
+                                    <span>ALL_TOYS_AND_BABY_PRODUCTS_CATEGORY</span>
+                                </label>
+                                <label for="BABY_BATH_SKIN_AND_GROOMING">
+                                    <input class="sub-category-checkbox" id="BABY_BATH_SKIN_AND_GROOMING" type="checkbox" name="BABY_BATH_SKIN_AND_GROOMING" />
+                                    <span>BABY_BATH_SKIN_AND_GROOMING</span>
+                                </label>
+                                <label for="BABY_PRODUCTS">
+                                    <input class="sub-category-checkbox" id="BABY_PRODUCTS" type="checkbox" name="BABY_PRODUCTS" />
+                                    <span>BABY_PRODUCTS</span>
+                                </label>
+                                <label for="DIET_AND_NUTRITION">
+                                    <input class="sub-category-checkbox" id="DIET_AND_NUTRITION" type="checkbox" name="DIET_AND_NUTRITION" />
+                                    <span>DIET_AND_NUTRITION</span>
+                                </label>
+                                <label for="INTERNATIONAL_TOY_STORE">
+                                    <input class="sub-category-checkbox" id="INTERNATIONAL_TOY_STORE" type="checkbox" name="INTERNATIONAL_TOY_STORE" />
+                                    <span>INTERNATIONAL_TOY_STORE</span>
+                                </label>
+                                <label for="NURSING_AND_FEEDING">
+                                    <input class="sub-category-checkbox" id="NURSING_AND_FEEDING" type="checkbox" name="NURSING_AND_FEEDING" />
+                                    <span>NURSING_AND_FEEDING</span>
+                                </label>
+                                <label for="STEM_TOYS_STORE">
+                                    <input class="sub-category-checkbox" id="STEM_TOYS_STORE" type="checkbox" name="STEM_TOYS_STORE" />
+                                    <span>STEM_TOYS_STORE</span>
+                                </label>
+                                <label for="STROLLERS_AND_PRAMS">
+                                    <input class="sub-category-checkbox" id="STROLLERS_AND_PRAMS" type="checkbox" name="STROLLERS_AND_PRAMS" />
+                                    <span>STROLLERS_AND_PRAMS</span>
+                                </label>
+                                <label for="TOYS_AND_GAMES">
+                                    <input class="sub-category-checkbox" id="TOYS_AND_GAMES" type="checkbox" name="TOYS_AND_GAMES" />
+                                    <span>TOYS_AND_GAMES</span>
+                                </label>
+                                <label for="TOYS_GIFTING_STORE">
+                                    <input class="sub-category-checkbox" id="TOYS_GIFTING_STORE" type="checkbox" name="TOYS_GIFTING_STORE" />
+                                    <span>TOYS_GIFTING_STORE</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">TV_AUDIO_CAMERAS:</span>
+                                <label for="ALL_TV_AUDIO_CAMERAS_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_TV_AUDIO_CAMERAS_CATEGORY" type="checkbox" name="TV_AUDIO_CAMERAS"/>
+                                    <span>ALL_TV_AUDIO_CAMERAS_CATEGORY</span>
+                                </label>
+                                <label for="ALL_ELECTRONICS">
+                                    <input class="sub-category-checkbox" id="ALL_ELECTRONICS" type="checkbox" name="ALL_ELECTRONICS" />
+                                    <span>ALL_ELECTRONICS</span>
+                                </label>
+                                <label for="CAMERA_ACCESSORIES">
+                                    <input class="sub-category-checkbox" id="CAMERA_ACCESSORIES" type="checkbox" name="CAMERA_ACCESSORIES" />
+                                    <span>CAMERA_ACCESSORIES</span>
+                                </label>
+                                <label for="CAMERAS">
+                                    <input class="sub-category-checkbox" id="CAMERAS" type="checkbox" name="CAMERAS" />
+                                    <span>CAMERAS</span>
+                                </label>
+                                <label for="HEADPHONES">
+                                    <input class="sub-category-checkbox" id="HEADPHONES" type="checkbox" name="HEADPHONES" />
+                                    <span>HEADPHONES</span>
+                                </label>
+                                <label for="HOME_AUDIO_AND_THEATER">
+                                    <input class="sub-category-checkbox" id="HOME_AUDIO_AND_THEATER" type="checkbox" name="HOME_AUDIO_AND_THEATER" />
+                                    <span>HOME_AUDIO_AND_THEATER</span>
+                                </label>
+                                <label for="HOME_ENTERTAINMENT_SYSTEMS">
+                                    <input class="sub-category-checkbox" id="HOME_ENTERTAINMENT_SYSTEMS" type="checkbox" name="HOME_ENTERTAINMENT_SYSTEMS" />
+                                    <span>HOME_ENTERTAINMENT_SYSTEMS</span>
+                                </label>
+                                <label for="SECURITY_CAMERAS">
+                                    <input class="sub-category-checkbox" id="SECURITY_CAMERAS" type="checkbox" name="SECURITY_CAMERAS" />
+                                    <span>SECURITY_CAMERAS</span>
+                                </label>
+                                <label for="SPEAKERS">
+                                    <input class="sub-category-checkbox" id="SPEAKERS" type="checkbox" name="SPEAKERS" />
+                                    <span>SPEAKERS</span>
+                                </label>
+                                <label for="TELEVISIONS">
+                                    <input class="sub-category-checkbox" id="TELEVISIONS" type="checkbox" name="TELEVISIONS" />
+                                    <span>TELEVISIONS</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">WOMENS_CLOTHING:</span>
+                                <label for="ALL_WOMENS_CLOTHING_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_WOMENS_CLOTHING_CATEGORY" type="checkbox" name="WOMENS_CLOTHING"/>
+                                    <span>ALL_WOMENS_CLOTHING_CATEGORY</span>
+                                </label>
+                                <label for="FASHION_AND_SILVER_JEWELLERY">
+                                    <input class="sub-category-checkbox" id="FASHION_AND_SILVER_JEWELLERY" type="checkbox" name="FASHION_AND_SILVER_JEWELLERY" />
+                                    <span>FASHION_AND_SILVER_JEWELLERY</span>
+                                </label>
+                                <label for="LINGERIE_AND_NIGHTWEAR">
+                                    <input class="sub-category-checkbox" id="LINGERIE_AND_NIGHTWEAR" type="checkbox" name="LINGERIE_AND_NIGHTWEAR" />
+                                    <span>LINGERIE_AND_NIGHTWEAR</span>
+                                </label>
+                                <label for="WESTERN_WEAR">
+                                    <input class="sub-category-checkbox" id="WESTERN_WEAR" type="checkbox" name="WESTERN_WEAR" />
+                                    <span>WESTERN_WEAR</span>
+                                </label>
+                            </div>
+                            <div class="category-filter-main">
+                                <span class="main-category-title">WOMENS_SHOES:</span>
+                                <label for="ALL_WOMENS_SHOES_CATEGORY">
+                                    <input class="main-category-checkbox" id="ALL_WOMENS_SHOES_CATEGORY" type="checkbox" name="WOMENS_SHOES"/>
+                                    <span>ALL_WOMENS_SHOES_CATEGORY</span>
+                                </label>
+                                <label for="BALLERINAS">
+                                    <input class="sub-category-checkbox" id="BALLERINAS" type="checkbox" name="BALLERINAS" />
+                                    <span>BALLERINAS</span>
+                                </label>
+                                <label for="FASHION_SANDALS">
+                                    <input class="sub-category-checkbox" id="FASHION_SANDALS" type="checkbox" name="FASHION_SANDALS" />
+                                    <span>FASHION_SANDALS</span>
+                                </label>
+                                <label for="FORMAL_SHOES">
+                                    <input class="sub-category-checkbox" id="FORMAL_SHOES" type="checkbox" name="FORMAL_SHOES" />
+                                    <span>FORMAL_SHOES</span>
+                                </label>
+                                <label for="SHOES">
+                                    <input class="sub-category-checkbox" id="SHOES" type="checkbox" name="SHOES" />
+                                    <span>SHOES</span>
+                                </label>
+                                <label for="SPORTS_SHOES">
+                                    <input class="sub-category-checkbox" id="SPORTS_SHOES" type="checkbox" name="SPORTS_SHOES" />
+                                    <span>SPORTS_SHOES</span>
                                 </label>
                             </div>
                         </div>
                         <div class="category-search">
-                            <button class="category-search-btn" type="submit">
-                                검색
-                            </button>
+                            <input type="text" class="search-word-input">
+                            <button class="category-search-btn" type="button">검색</button>
                         </div>
                     </form>
                 </div>
@@ -168,6 +665,7 @@
             <div class="products container">
                 <div class="product-item-container">
                     <ul class="product-item-list"></ul>
+                    <button class="more-product-btn">더 보기</button>
                 </div>
             </div>
         </section>

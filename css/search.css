@@ -1,3 +1,10 @@
+.category-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 .category-filter-content {
     margin-bottom: 4em;
     padding: 2em;
@@ -6,14 +13,13 @@
 
 .category-filter-content form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .category-filter-content label {
     cursor: pointer;
     display: inline-block;
-    width: 5em;
     white-space: nowrap;
 }
 
@@ -34,8 +40,6 @@
 }
 
 .main-category-title {
-    display: inline-block;
-    width: 6em;
     font-weight: bold;
 }
 
@@ -49,4 +53,22 @@
     outline: none;
     background-color: #39b9f8;
     border-radius: 5px;
+}
+
+.category-filter-main {
+    margin: 0.5em 0;
+}
+
+.more-product-btn {
+    cursor: pointer;
+    width: 10em;
+    height: 4em;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    outline: none;
+    background-color: #39b9f8;
+    border-radius: 5px;
+    margin: 0 50% 3em;
+    transform: translate(-50%, 0);
 }

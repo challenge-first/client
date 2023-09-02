@@ -1,17 +1,23 @@
-const laptop = document.querySelector(".category-filter-laptop");
-const computerParts = document.querySelector(".category-filter-computer-parts");
-const submitBtn = document.querySelector(".category-search-btn");
+const currentMainCategory = [];
+const moreProductBtn = document.querySelector(".more-product-btn");
+const categorySearchBtn = document.querySelector(".category-search-btn");
+let url = `http://localhost:8080/products?`
+let lastProductId;
 
-let currentMainCategory = "LAPTOP";
-let currentSubCategory = [];
+document.querySelector(".product-item-list").innerHTML = "";
 
-if (localStorage.getItem("searchResult") !== null) {
-    for (const item of JSON.parse(localStorage.getItem("searchResult"))) {
-        document.querySelector(".product-item-list").innerHTML += `
+async function getProduct() {
+    const productItemList = document.querySelector(".product-item-list");
+    const response = await axios.get(url.slice(0, -1));
+    const data = response.data.data
+    lastProductId = response.data.lastProductId
+
+    for (const item of data) {
+        productItemList.innerHTML += `
         <li class="product-item">
             <a href="/pages/product.html">
                 <div class="product-img-area">
-                    <img class="product-img" src="${item.imageUrl}">
+                    <img class="product-img" src="${item.image}">
                 </div>
                 <div class="product-info-area">
                     <div class="product-info-left-area">
@@ -28,85 +34,130 @@ if (localStorage.getItem("searchResult") !== null) {
     }
 }
 
-if (localStorage.getItem("searchResult") == null) {
-    let url = `http://localhost:8080/products/maincategory/${currentMainCategory}`;
+getProduct()
+
+async function handleCategorySearchBtn() {
+    url = `http://localhost:8080/products?`
+    const productItemList = document.querySelector(".product-item-list");
+    const searchWord = document.querySelector(".search-word-input").value;
+    const mainCategoryCheckboxList = document.querySelectorAll(".main-category-checkbox");
+    const subCategoryCheckboxList = document.querySelectorAll(".sub-category-checkbox");
     
-    axios.get(url)
-    .then(data => {
-        localStorage.setItem("searchResult", JSON.stringify(data.data.data))
-        location.reload();
-    })
-    .catch(error => console.log(error))
+    document.querySelector(".product-item-list").innerHTML = "";
+    
+    if (searchWord !== "") {
+        url += `searchword=${searchWord}&`
+    }
+    
+    for (let i = 0; i < mainCategoryCheckboxList.length; i++) {
+        if (mainCategoryCheckboxList[i].checked) {
+            url += `maincategory=${mainCategoryCheckboxList[i].name}&`
+        }
+    }
+    
+    for (let i = 0; i < subCategoryCheckboxList.length; i++) {
+        if (subCategoryCheckboxList[i].checked) {
+            url += `subcategory=${subCategoryCheckboxList[i].name}&`
+        }
+    }
+    
+    if (currentMainCategory.length !== 0) {
+        for (let i = 0; i < currentMainCategory.length; i++) {
+            url += `maincategory=${currentMainCategory[i]}&`
+        }
+    }
+    
+    const response = await axios.get(url.slice(0, -1));
+    const data = response.data.data
+    lastProductId = response.data.lastProductId
+
+    for (const item of data) {
+        productItemList.innerHTML += `
+        <li class="product-item">
+            <a href="/pages/product.html">
+                <div class="product-img-area">
+                    <img class="product-img" src="${item.image}">
+                </div>
+                <div class="product-info-area">
+                    <div class="product-info-left-area">
+                        <p class="product-title">${item.name}</p>
+                    </div>
+                    <div class="product-info-right-area">
+                        <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
+                        <p class="product-price">${item.price}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        `
+    }
+    console.log(url)
 }
 
-laptop.addEventListener("click", () => {
-    const computerPartsCheckBox = computerParts.children;
-    const laptopCheckBox = laptop.children;
-    currentSubCategory = [];
+categorySearchBtn.addEventListener("click", handleCategorySearchBtn)
 
-    for (let i = 1; i < computerPartsCheckBox.length; i++) {
-        computerPartsCheckBox[i].children[0].checked = false;
-    }
+document.querySelector(".category-filter").addEventListener("click", (e) => {
+    if (e.target.classList.contains("main-category-checkbox")) {
+        if (e.target.parentNode.childNodes[1].className === "main-category-checkbox") {
+            if (e.target.parentNode.childNodes[1].checked) {
+                for (let i = 1; i < e.target.parentNode.parentNode.children.length; i++) {
+                    e.target.parentNode.parentNode.children[i].children[0].checked = true
+                }
+            }
 
-    for (let i = 1; i < laptopCheckBox.length; i++) {
-        if (laptopCheckBox[i].children[0].checked) {
-            currentSubCategory.push(laptopCheckBox[i].children[0].name)
+            if (e.target.parentNode.childNodes[1].checked === false) {
+                for (let i = 1; i < e.target.parentNode.parentNode.children.length; i++) {
+                    e.target.parentNode.parentNode.children[i].children[0].checked = false
+                }
+            }
         }
     }
 
-    currentMainCategory = "LAPTOP";
-})
+    if (e.target.classList.contains("sub-category-checkbox")) {
+        if (e.target.parentNode.childNodes[1].className === "sub-category-checkbox") {
+            if (e.target.parentNode.children[0].checked) {
+                currentMainCategory.push(e.target.parentNode.parentNode.children[1].children[0].name)
+            }
 
-computerParts.addEventListener("click", () => {
-    const laptopCheckBox = laptop.children;
-    const computerPartsCheckBox = computerParts.children;
-    currentSubCategory = [];
-
-    for (let i = 1; i < laptopCheckBox.length; i++) {
-        laptopCheckBox[i].children[0].checked = false;
-    }
-
-    for (let i = 1; i < computerPartsCheckBox.length; i++) {
-        if (computerPartsCheckBox[i].children[0].checked) {
-            currentSubCategory.push(computerPartsCheckBox[i].children[0].name)
+            if (e.target.parentNode.children[0].checked === false) {
+                const indexOf = currentMainCategory.indexOf(e.target.parentNode.parentNode.children[1].children[0].name)
+                if (indexOf !== -1) {
+                    currentMainCategory.splice(indexOf, 1);
+                }
+            }
         }
     }
-    
-    currentMainCategory = "COMPUTER_PARTS";
 })
 
-document.querySelector(".category-filter-section").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    let url = `http://localhost:8080/products/maincategory/${currentMainCategory}?`;
+moreProductBtn.addEventListener("click", handleMoreProductBtn);
 
-    for (const sub of currentSubCategory) {
-        url += `subcategory=${sub}&`
+async function handleMoreProductBtn() {
+    const productItemList = document.querySelector(".product-item-list");
+    const lastProductIdUrl = `${url}lastproductid=${lastProductId}`
+
+    const response = await axios.get(lastProductIdUrl);
+    const data = response.data.data
+    lastProductId = response.data.lastProductId
+
+    for (const item of data) {
+        productItemList.innerHTML += `
+        <li class="product-item">
+            <a href="/pages/product.html">
+                <div class="product-img-area">
+                    <img class="product-img" src="${item.image}">
+                </div>
+                <div class="product-info-area">
+                    <div class="product-info-left-area">
+                        <p class="product-title">${item.name}</p>
+                    </div>
+                    <div class="product-info-right-area">
+                        <form action=""><button class="like-btn"><i class="xi-heart-o"></i></button></form>
+                        <p class="product-price">${item.price}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        `
     }
-    
-    axios.get(url.slice(0, -1))
-    .then(data => {
-        localStorage.setItem("searchResult", JSON.stringify(data.data.data))
-        location.reload();
-    })
-    .catch(error => console.log(error))
-})
-
-document.querySelector(".search-form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    let url = `http://localhost:8080/products/maincategory/${currentMainCategory}?`;
-
-    for (const sub of currentSubCategory) {
-        url += `subcategory=${sub}&`
-    }
-    
-    axios.get(url.slice(0, -1))
-    .then(data => {
-        localStorage.setItem("searchResult", JSON.stringify(data.data.data))
-        location.reload();
-    })
-    .catch(error => console.log(error))
-})
-
-if (localStorage.getItem("searchResult") !== null) {
-    localStorage.removeItem("searchResult");
+    console.log(url)
 }

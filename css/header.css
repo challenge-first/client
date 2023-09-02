@@ -22,26 +22,6 @@
     height: 4.5em;
 }
 
-.header-center-side {
-    display: flex;
-    align-items: center;
-}
-
-.header-searchbar {
-    width: 28vw;
-    height: 3em;
-    padding: 0 2em;
-    border-radius: 1.5em;
-    border: 0;
-    outline: none;
-    background-color: #555;
-    color: #eee;
-}
-
-::placeholder {
-    color: #eee;
-}
-
 .header-right-side {
     display: flex;
     align-items: center;
