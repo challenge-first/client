@@ -17,7 +17,7 @@
 .logo {
     display: inline-block;
     width: 12.5em;
-    background: url(<%= baseUrl %>/images/logo.jpg) no-repeat center center;
+    background: url(/images/logo.jpg) no-repeat center center;
     background-size: contain;
     height: 4.5em;
 }
