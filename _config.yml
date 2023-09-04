@@ -1,5 +1,4 @@
-url: "https://challenge-first.github.io"
-baseUrl: "/client"
+url: "https://challenge-first.github.io/client"
 cssUrl: "/css"
 jsUrl: "/js"
 pageUrl: "/pages"
