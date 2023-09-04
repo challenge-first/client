@@ -1,2 +1,4 @@
 url: "https://challenge-first.github.io"
-baseurl: "/css"
+cssUrl: "/css"
+jsUrl: "/js"
+pageUrl: "/pages"
