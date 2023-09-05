@@ -4,6 +4,8 @@ const token = localStorage.getItem("authorization");
 const headerPointInfo = document.querySelector(".header-point-info");
 const loginBtn = document.querySelector(".login-point-btn");
 const point = document.querySelector(".header-point");
+const bidPoint = document.querySelector(".header-bid");
+
 const logoutBtn = `
     <a class="login-point-btn">로그아웃</a>
 `;
@@ -14,7 +16,7 @@ const logoutBtn = `
         loginBtn.textContent = "로그아웃";
         loginBtn.setAttribute("href", "/index.html");
         loginBtn.addEventListener("click", () => {
-            localStorage.removeItem("authorization");
+            localStorage.clear();
         });
         const pointData = await axios({
             method: "get",
@@ -24,7 +26,9 @@ const logoutBtn = `
             },
         });
         console.log(pointData);
-        point.textContent = pointData.data.point + "P";
+        bidPoint.textContent += pointData.data.deposit + "P";
+        point.textContent += pointData.data.point + "P";
+        localStorage.setItem("availablePoint", pointData.data.availablePoint);
     } else {
         headerPointInfo.style.display = "none";
         loginBtn.style.display = "block";

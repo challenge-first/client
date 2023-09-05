@@ -16,10 +16,10 @@
 
 .logo {
     display: inline-block;
-    width: 12.5em;
-    background: url(/images/logo.jpg) no-repeat center center;
+    width: 11.5em;
+    background: url(/images/logo.png) no-repeat center center;
     background-size: contain;
-    height: 4.5em;
+    height: 3.5em;
 }
 
 .header-right-side {
@@ -30,7 +30,6 @@
 }
 
 .header-point {
-    font-weight: 900;
 }
 
 .login-point-btn {
@@ -48,10 +47,33 @@
 
 .header-point-info {
     display: flex;
-    gap: 1em;
+    gap: 2em;
+    align-items: center;
+}
+
+.header-point-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.header-point-section > p {
+    font-weight: 800;
+    font-size: 0.9em;
+}
+
+.charge-point-btn-section {
+    height: fit-content;
 }
 
 .charge-point-btn {
-    font-weight: bold;
-    color: #39b9f8;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    background-color: #35c5f0;
+    color: #fff;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.charge-point-btn:hover {
+    transform: scale(1.2);
+    background-color: #009fce;
 }

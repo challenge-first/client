@@ -90,8 +90,7 @@ const bid = () => {
                 const data = res.data;
                 alert("입찰성공");
                 console.log(data);
-                getAuction();
-                pointElement.value = null;
+                location.reload();
             })
             .catch((err) => {
                 alert("에러");

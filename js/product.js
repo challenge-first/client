@@ -9,7 +9,7 @@ let tempDiv = ``;
     try {
         const response = await axios({ method: "get", url });
         console.log(response.data.data);
-        const { name, imageUrl, price, content, stockCount } =
+        const { name, image, price, productState, stockCount } =
             response.data.data;
         tempDiv = `
                 <div class="product-title-area">
@@ -20,7 +20,7 @@ let tempDiv = ``;
                 <div class="product-img-area">
                     <img 
                         class = "product-img"
-                        src="${imageUrl}"
+                        src="${image}"
                     />
                 </div>
                 <div class="product-info-area">
@@ -29,7 +29,7 @@ let tempDiv = ``;
                         <span class="product-price">${price}</span> 원
                     </p>
                     <span class="product-content">
-                    ${content}
+                    ${productState == "IN_STOCK" ? "재고 있음" : "재고 없음"}
                     </span>
                     <p>
                         재고:

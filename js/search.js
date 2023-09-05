@@ -15,7 +15,7 @@ async function getProduct() {
     for (const item of data) {
         productItemList.innerHTML += `
         <li class="product-item">
-            <a href="/pages/product.html">
+            <div class="product-item-container" onclick="onClickProduct(${item.id})">
                 <div class="product-img-area">
                     <img class="product-img" src="${item.image}">
                 </div>
@@ -28,7 +28,7 @@ async function getProduct() {
                         <p class="product-price">${item.price}</p>
                     </div>
                 </div>
-            </a>
+            </div>
         </li>
         `;
     }
@@ -78,7 +78,7 @@ async function handleCategorySearchBtn() {
     for (const item of data) {
         productItemList.innerHTML += `
         <li class="product-item">
-            <a href="/pages/product.html">
+            <div class="product-item-container" onclick="onClickProduct(${item.id})">
                 <div class="product-img-area">
                     <img class="product-img" src="${item.image}">
                 </div>
@@ -91,7 +91,7 @@ async function handleCategorySearchBtn() {
                         <p class="product-price">${item.price}</p>
                     </div>
                 </div>
-            </a>
+            </div>
         </li>
         `;
     }
@@ -168,7 +168,7 @@ async function handleMoreProductBtn() {
     for (const item of data) {
         productItemList.innerHTML += `
         <li class="product-item">
-            <a href="/pages/product.html">
+            <div class="product-item-container" onclick="onClickProduct(${item.id})">
                 <div class="product-img-area">
                     <img class="product-img" src="${item.image}">
                 </div>
@@ -181,9 +181,14 @@ async function handleMoreProductBtn() {
                         <p class="product-price">${item.price}</p>
                     </div>
                 </div>
-            </a>
+            </div>
         </li>
         `;
     }
     console.log(url);
 }
+
+const onClickProduct = (id) => {
+    localStorage.setItem("productId", id);
+    window.location = "/pages/product.html";
+};
