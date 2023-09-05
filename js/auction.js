@@ -1,5 +1,6 @@
 const div = document.querySelector(".auction-info");
-const url = "http://localhost:8080/auctions";
+const url =
+    "http://ec2-43-201-26-149.ap-northeast-2.compute.amazonaws.com:8000/auction-server/auctions";
 let tempDiv = ``;
 let auctionId;
 let buttonElement;
@@ -16,20 +17,20 @@ const getAuction = async () => {
         });
         console.log(response.data.data);
         const {
-            id,
-            name,
+            auctionId,
+            productName,
             imageUrl,
             openingPrice,
             winningPrice,
             openingTime,
             closingTime,
         } = response.data.data;
-        localStorage.setItem("auctionId", id);
+        localStorage.setItem("auctionId", auctionId);
 
         tempDiv = `
                 <div class="auction-title-area">
                     <p class = "auction-title">
-                    ${name}
+                    ${productName}
                     </p>
                 </div>
                 <div class="auction-img-area">
@@ -61,21 +62,20 @@ const buttonForm = () => {
 const bid = () => {
     const dataToSend = {
         point: "",
-        time: "",
     };
 
     auctionId = localStorage.getItem("auctionId");
-    const postUrl = "http://localhost:8080/auctions/" + auctionId;
+    const postUrl =
+        "http://ec2-43-201-26-149.ap-northeast-2.compute.amazonaws.com:8000/auction-server/auctions/" +
+        auctionId;
 
     const onPointInput = (event) => {
         dataToSend.point = event.target.value;
-        dataToSend.time = new Date().toISOString();
     };
 
     buttonElement = document.querySelector("#button");
-    pointElement = document
-        .querySelector("#point")
-        .addEventListener("input", onPointInput);
+    pointElement = document.querySelector("#point");
+    pointElement.addEventListener("input", onPointInput);
 
     buttonElement.addEventListener("click", () => {
         axios({
@@ -90,6 +90,8 @@ const bid = () => {
                 const data = res.data;
                 alert("입찰성공");
                 console.log(data);
+                getAuction();
+                pointElement.value = null;
             })
             .catch((err) => {
                 alert("에러");

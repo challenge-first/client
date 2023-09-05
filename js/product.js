@@ -1,13 +1,16 @@
 const div = document.querySelector(".product-detail");
 const productId = localStorage.getItem("productId");
-const url = "http://localhost:8080/products/" + productId;
-let tempDiv =``;
+const url =
+    "http://ec2-43-201-26-149.ap-northeast-2.compute.amazonaws.com:8000/product-server/products/" +
+    productId;
+let tempDiv = ``;
 
 (async function () {
-    try{
-        const response = await axios({ method: "get", url })
+    try {
+        const response = await axios({ method: "get", url });
         console.log(response.data.data);
-        const {name, imageUrl, price, content, stockCount} = response.data.data;
+        const { name, imageUrl, price, content, stockCount } =
+            response.data.data;
         tempDiv = `
                 <div class="product-title-area">
                     <p class = "product-title">
@@ -36,9 +39,9 @@ let tempDiv =``;
                 <div class="transaction-btn-area">
                     <a href="/pages/transaction.html">구 매</a>
                 </div>
-                `
+                `;
         div.innerHTML = tempDiv;
     } catch (err) {
         console.log(err);
     }
-})(); 
+})();

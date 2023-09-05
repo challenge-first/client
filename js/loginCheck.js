@@ -23,7 +23,7 @@ const logoutBtn = `
                 Authorization: localStorage.getItem("authorization"),
             },
         });
-
+        console.log(pointData);
         point.textContent = pointData.data.point + "P";
     } else {
         headerPointInfo.style.display = "none";
