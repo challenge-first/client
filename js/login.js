@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/members/login";
+const url = "http://43.201.26.149:8000/member-server/members/login";
 
 const loginForm = document.querySelector(".login-form");
 
@@ -9,12 +9,10 @@ const dataToSend = {
 
 const onIdInput = (event) => {
     dataToSend.username = event.target.value;
-    console.log(dataToSend.username);
 };
 
 const onPasswordInput = (event) => {
     dataToSend.password = event.target.value;
-    console.log(dataToSend.password);
 };
 
 const id = document.querySelector("#id").addEventListener("input", onIdInput);
@@ -35,7 +33,6 @@ button.addEventListener("click", async () => {
                     res.headers.authorization
                 );
             }
-            console.log(data);
             document.location = "/index.html";
         })
         .catch((err) => {
