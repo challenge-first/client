@@ -19,7 +19,7 @@
 
 .logo {
   display: inline-block;
-  background: url(/images/logo.jpg) no-repeat center center;
+  background: url(/images/logo.png) no-repeat center center;
   background-size: contain;
   width: 13rem;
   height: 4rem;
